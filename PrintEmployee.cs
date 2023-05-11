@@ -65,5 +65,10 @@ namespace Course_Work
             helper.printDocument.DefaultPageSettings.Landscape = true;
             helper.PrintDataGridView(DataGridView_employee);
         }
+
+        private void button_search_Click(object sender, EventArgs e)
+        {
+            employee.searchEmployee(textBox_search.Text);
+        }
     }
 }

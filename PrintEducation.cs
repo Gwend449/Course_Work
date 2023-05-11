@@ -18,7 +18,7 @@ namespace Course_Work
 
         private void PrintEducation_Load(object sender, EventArgs e)
         {
-            showData(new SqlCommand("SELECT Образование.Id, Сотрудник.Имя, Сотрудник.Отчество, Сотрудник.Пол, Образование.[Учебное_заведение], Образование.Направление, Образование.[Год_окончания] FROM Сотрудник INNER JOIN[Образование] ON[Образование].[Сотрудник] = [Сотрудник].Id"));
+            showData(new SqlCommand("SELECT Образование.Id, Сотрудник.Имя, Сотрудник.Отчество, Сотрудник.Пол, Образование.[Учебное_заведение] as [Учебное заведение], Образование.Направление, Образование.[Год_окончания] FROM Сотрудник INNER JOIN[Образование] ON[Образование].[Сотрудник] = [Сотрудник].Id"));
             DataGridViewColumn column0 = DataGridView_employee.Columns[0];
             column0.Width = 35;
             DataGridViewColumn column5 = DataGridView_employee.Columns[5];
@@ -63,6 +63,51 @@ namespace Course_Work
             helper.FooterSpacing = 15;
             helper.printDocument.DefaultPageSettings.Landscape = true;
             helper.PrintDataGridView(DataGridView_employee);
+        }
+
+        private void button_search_Click(object sender, EventArgs e)
+        {
+            education.searchEducation(textBox_search.Text);
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void textBox_search_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DataGridView_employee_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void radioButton_Male_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton_FeMale_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

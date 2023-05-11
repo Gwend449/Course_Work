@@ -145,7 +145,7 @@ namespace Course_Work
             //int employee_id = Convert.ToInt32(textBox_empl_ID.Text);
             //checkExper(employee_id);
         }
-        int click = 0;
+        int click = 1;
         private void radioButtonYes_Click(object sender, EventArgs e)
         {
             click++;

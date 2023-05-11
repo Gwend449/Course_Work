@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataBase.cs" />
+    <Compile Include="DegreeClass.cs" />
     <Compile Include="DegreeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +80,12 @@
     </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageDegreeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageDegreeForm.Designer.cs">
+      <DependentUpon>ManageDegreeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ManageEducationForm.cs">
       <SubType>Form</SubType>
@@ -117,6 +124,12 @@
       <DependentUpon>PrintEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="PrinterClass.cs" />
+    <Compile Include="PrintJobActivity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintJobActivity.Designer.cs">
+      <DependentUpon>PrintJobActivity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegisterForm.cs">
@@ -144,6 +157,9 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ManageDegreeForm.resx">
+      <DependentUpon>ManageDegreeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManageEducationForm.resx">
       <DependentUpon>ManageEducationForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -161,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PrintEmployee.resx">
       <DependentUpon>PrintEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintJobActivity.resx">
+      <DependentUpon>PrintJobActivity.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

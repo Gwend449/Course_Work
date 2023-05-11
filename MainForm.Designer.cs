@@ -38,6 +38,7 @@
             this.button_Grd_addData = new System.Windows.Forms.Button();
             this.button_grade = new System.Windows.Forms.Button();
             this.panel_postSubmenu = new System.Windows.Forms.Panel();
+            this.button_print = new System.Windows.Forms.Button();
             this.button_Post_editVac = new System.Windows.Forms.Button();
             this.button_Post_editData = new System.Windows.Forms.Button();
             this.button_Post_vacation = new System.Windows.Forms.Button();
@@ -68,7 +69,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button_print = new System.Windows.Forms.Button();
             this.panel_slide.SuspendLayout();
             this.panel_gradeSubmenu.SuspendLayout();
             this.panel_postSubmenu.SuspendLayout();
@@ -229,6 +229,22 @@
             this.panel_postSubmenu.Name = "panel_postSubmenu";
             this.panel_postSubmenu.Size = new System.Drawing.Size(186, 250);
             this.panel_postSubmenu.TabIndex = 5;
+            // 
+            // button_print
+            // 
+            this.button_print.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button_print.FlatAppearance.BorderSize = 0;
+            this.button_print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_print.ForeColor = System.Drawing.Color.White;
+            this.button_print.Location = new System.Drawing.Point(0, 200);
+            this.button_print.Name = "button_print";
+            this.button_print.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.button_print.Size = new System.Drawing.Size(186, 50);
+            this.button_print.TabIndex = 4;
+            this.button_print.Text = "Печать";
+            this.button_print.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_print.UseVisualStyleBackColor = true;
+            this.button_print.Click += new System.EventHandler(this.button_print_Click);
             // 
             // button_Post_editVac
             // 
@@ -628,21 +644,6 @@
             this.label2.Size = new System.Drawing.Size(95, 21);
             this.label2.TabIndex = 4;
             this.label2.Text = "Welcome : ";
-            // 
-            // button_print
-            // 
-            this.button_print.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button_print.FlatAppearance.BorderSize = 0;
-            this.button_print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_print.ForeColor = System.Drawing.Color.White;
-            this.button_print.Location = new System.Drawing.Point(0, 200);
-            this.button_print.Name = "button_print";
-            this.button_print.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.button_print.Size = new System.Drawing.Size(186, 50);
-            this.button_print.TabIndex = 4;
-            this.button_print.Text = "Печать";
-            this.button_print.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_print.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 

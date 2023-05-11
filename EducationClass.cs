@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Course_Work
 {
@@ -87,13 +83,13 @@ namespace Course_Work
             }
         }
 
-        //public DataTable searchEducation(string search)
-        //{
-        //    SqlCommand command = new SqlCommand("SELECT * FROM [Образование] WHERE CONCAT([Имя],[Фамилия],[Отчество]) LIKE '%" + search + "%'", dbConnect.getConnection);
-        //    SqlDataAdapter adapter = new SqlDataAdapter(command);
-        //    DataTable table = new DataTable();
-        //    adapter.Fill(table);
-        //    return table;
-        //}
+        public DataTable searchEducation(string search)
+        {
+            SqlCommand command = new SqlCommand("SELECT * FROM [Образование] WHERE CONCAT([Имя],[Фамилия],[Отчество]) LIKE '%" + search + "%'", dbConnect.getConnection);
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            return table;
+        }
     }
 }

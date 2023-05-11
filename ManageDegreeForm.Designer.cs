@@ -1,6 +1,6 @@
 ﻿namespace Course_Work
 {
-    partial class DegreeForm
+    partial class ManageDegreeForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,62 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.panel2 = new System.Windows.Forms.Panel();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button_edct = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.button_empl = new System.Windows.Forms.Button();
+            this.button_clear = new System.Windows.Forms.Button();
+            this.button_Обновить = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.radioButton_FeMale = new System.Windows.Forms.RadioButton();
             this.radioButton_Degree = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
             this.DataGridView_employee = new Guna.UI2.WinForms.Guna2DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox_empId = new System.Windows.Forms.TextBox();
-            this.button_clear = new System.Windows.Forms.Button();
-            this.button_add = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button_delete = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView_employee)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
-            this.panel2.Location = new System.Drawing.Point(12, 425);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(910, 10);
-            this.panel2.TabIndex = 26;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
-            this.panel1.Controls.Add(this.button_edct);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.button_empl);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(934, 64);
-            this.panel1.TabIndex = 25;
-            // 
-            // button_edct
-            // 
-            this.button_edct.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button_edct.BackColor = System.Drawing.Color.White;
-            this.button_edct.FlatAppearance.BorderSize = 0;
-            this.button_edct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_edct.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_edct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
-            this.button_edct.Location = new System.Drawing.Point(711, 12);
-            this.button_edct.Name = "button_edct";
-            this.button_edct.Size = new System.Drawing.Size(211, 42);
-            this.button_edct.TabIndex = 40;
-            this.button_edct.Text = "Показать cтепени";
-            this.button_edct.UseVisualStyleBackColor = false;
-            this.button_edct.Click += new System.EventHandler(this.button_edct_Click);
+            this.panel1.TabIndex = 56;
             // 
             // label7
             // 
@@ -97,23 +71,47 @@
             this.label7.Size = new System.Drawing.Size(234, 32);
             this.label7.TabIndex = 18;
             this.label7.Text = "Ученая Степень";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
-            // button_empl
+            // button_clear
             // 
-            this.button_empl.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button_empl.BackColor = System.Drawing.Color.White;
-            this.button_empl.FlatAppearance.BorderSize = 0;
-            this.button_empl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_empl.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_empl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
-            this.button_empl.Location = new System.Drawing.Point(12, 12);
-            this.button_empl.Name = "button_empl";
-            this.button_empl.Size = new System.Drawing.Size(211, 42);
-            this.button_empl.TabIndex = 39;
-            this.button_empl.Text = "Показать сотрудников";
-            this.button_empl.UseVisualStyleBackColor = false;
-            this.button_empl.Click += new System.EventHandler(this.button_empl_Click);
+            this.button_clear.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button_clear.BackColor = System.Drawing.Color.MediumBlue;
+            this.button_clear.FlatAppearance.BorderSize = 0;
+            this.button_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_clear.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_clear.ForeColor = System.Drawing.Color.White;
+            this.button_clear.Location = new System.Drawing.Point(798, 506);
+            this.button_clear.Name = "button_clear";
+            this.button_clear.Size = new System.Drawing.Size(109, 42);
+            this.button_clear.TabIndex = 59;
+            this.button_clear.Text = "Очистить";
+            this.button_clear.UseVisualStyleBackColor = false;
+            this.button_clear.Click += new System.EventHandler(this.button_clear_Click);
+            // 
+            // button_Обновить
+            // 
+            this.button_Обновить.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button_Обновить.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
+            this.button_Обновить.FlatAppearance.BorderSize = 0;
+            this.button_Обновить.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Обновить.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_Обновить.ForeColor = System.Drawing.Color.White;
+            this.button_Обновить.Location = new System.Drawing.Point(798, 557);
+            this.button_Обновить.Name = "button_Обновить";
+            this.button_Обновить.Size = new System.Drawing.Size(109, 42);
+            this.button_Обновить.TabIndex = 58;
+            this.button_Обновить.Text = "Обновить";
+            this.button_Обновить.UseVisualStyleBackColor = false;
+            this.button_Обновить.Click += new System.EventHandler(this.button_Обновить_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
+            this.panel2.Location = new System.Drawing.Point(12, 437);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(910, 10);
+            this.panel2.TabIndex = 57;
             // 
             // radioButton_FeMale
             // 
@@ -121,10 +119,10 @@
             this.radioButton_FeMale.AutoSize = true;
             this.radioButton_FeMale.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButton_FeMale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
-            this.radioButton_FeMale.Location = new System.Drawing.Point(295, 525);
+            this.radioButton_FeMale.Location = new System.Drawing.Point(295, 537);
             this.radioButton_FeMale.Name = "radioButton_FeMale";
             this.radioButton_FeMale.Size = new System.Drawing.Size(131, 23);
-            this.radioButton_FeMale.TabIndex = 24;
+            this.radioButton_FeMale.TabIndex = 55;
             this.radioButton_FeMale.Text = "Доктор Наук";
             this.radioButton_FeMale.UseVisualStyleBackColor = true;
             // 
@@ -134,10 +132,10 @@
             this.radioButton_Degree.AutoSize = true;
             this.radioButton_Degree.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButton_Degree.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
-            this.radioButton_Degree.Location = new System.Drawing.Point(127, 525);
+            this.radioButton_Degree.Location = new System.Drawing.Point(127, 537);
             this.radioButton_Degree.Name = "radioButton_Degree";
             this.radioButton_Degree.Size = new System.Drawing.Size(151, 23);
-            this.radioButton_Degree.TabIndex = 23;
+            this.radioButton_Degree.TabIndex = 54;
             this.radioButton_Degree.Text = "Кандидат Наук";
             this.radioButton_Degree.UseVisualStyleBackColor = true;
             // 
@@ -147,47 +145,47 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
-            this.label5.Location = new System.Drawing.Point(30, 526);
+            this.label5.Location = new System.Drawing.Point(30, 538);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(85, 19);
-            this.label5.TabIndex = 22;
+            this.label5.TabIndex = 53;
             this.label5.Text = "Степень :";
             // 
             // DataGridView_employee
             // 
             this.DataGridView_employee.AllowUserToAddRows = false;
             this.DataGridView_employee.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.DataGridView_employee.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            this.DataGridView_employee.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.DataGridView_employee.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DataGridView_employee.BackgroundColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridView_employee.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridView_employee.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.DataGridView_employee.ColumnHeadersHeight = 34;
             this.DataGridView_employee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGridView_employee.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGridView_employee.DefaultCellStyle = dataGridViewCellStyle12;
             this.DataGridView_employee.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DataGridView_employee.Location = new System.Drawing.Point(12, 70);
             this.DataGridView_employee.Name = "DataGridView_employee";
             this.DataGridView_employee.RowHeadersVisible = false;
             this.DataGridView_employee.RowTemplate.Height = 60;
             this.DataGridView_employee.RowTemplate.ReadOnly = true;
-            this.DataGridView_employee.Size = new System.Drawing.Size(910, 349);
-            this.DataGridView_employee.TabIndex = 21;
+            this.DataGridView_employee.Size = new System.Drawing.Size(910, 361);
+            this.DataGridView_employee.TabIndex = 52;
             this.DataGridView_employee.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.DataGridView_employee.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.DataGridView_employee.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
@@ -217,62 +215,70 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(30, 458);
+            this.label1.Location = new System.Drawing.Point(30, 470);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(137, 19);
-            this.label1.TabIndex = 20;
+            this.label1.TabIndex = 51;
             this.label1.Text = "Сотрудник (Id) :";
             // 
             // textBox_empId
             // 
             this.textBox_empId.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox_empId.Location = new System.Drawing.Point(173, 455);
+            this.textBox_empId.Location = new System.Drawing.Point(173, 467);
             this.textBox_empId.Name = "textBox_empId";
             this.textBox_empId.ReadOnly = true;
             this.textBox_empId.Size = new System.Drawing.Size(123, 27);
-            this.textBox_empId.TabIndex = 19;
+            this.textBox_empId.TabIndex = 50;
             // 
-            // button_clear
+            // label2
             // 
-            this.button_clear.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button_clear.BackColor = System.Drawing.Color.MediumBlue;
-            this.button_clear.FlatAppearance.BorderSize = 0;
-            this.button_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_clear.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_clear.ForeColor = System.Drawing.Color.White;
-            this.button_clear.Location = new System.Drawing.Point(798, 490);
-            this.button_clear.Name = "button_clear";
-            this.button_clear.Size = new System.Drawing.Size(109, 42);
-            this.button_clear.TabIndex = 49;
-            this.button_clear.Text = "Очистить";
-            this.button_clear.UseVisualStyleBackColor = false;
-            this.button_clear.Click += new System.EventHandler(this.button_clear_Click);
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
+            this.label2.Location = new System.Drawing.Point(342, 469);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(116, 19);
+            this.label2.TabIndex = 61;
+            this.label2.Text = "Степень (Id) :";
             // 
-            // button_add
+            // textBox1
             // 
-            this.button_add.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
-            this.button_add.FlatAppearance.BorderSize = 0;
-            this.button_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_add.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_add.ForeColor = System.Drawing.Color.White;
-            this.button_add.Location = new System.Drawing.Point(798, 545);
-            this.button_add.Name = "button_add";
-            this.button_add.Size = new System.Drawing.Size(109, 42);
-            this.button_add.TabIndex = 48;
-            this.button_add.Text = "Добавить";
-            this.button_add.UseVisualStyleBackColor = false;
-            this.button_add.Click += new System.EventHandler(this.button_add_Click);
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox1.Location = new System.Drawing.Point(485, 466);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(123, 27);
+            this.textBox1.TabIndex = 60;
             // 
-            // DegreeForm
+            // button_delete
+            // 
+            this.button_delete.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button_delete.BackColor = System.Drawing.Color.Crimson;
+            this.button_delete.FlatAppearance.BorderSize = 0;
+            this.button_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_delete.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_delete.ForeColor = System.Drawing.Color.White;
+            this.button_delete.Location = new System.Drawing.Point(680, 557);
+            this.button_delete.Name = "button_delete";
+            this.button_delete.Size = new System.Drawing.Size(109, 42);
+            this.button_delete.TabIndex = 77;
+            this.button_delete.Text = "Удалить";
+            this.button_delete.UseVisualStyleBackColor = false;
+            this.button_delete.Click += new System.EventHandler(this.button_delete_Click);
+            // 
+            // ManageDegreeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 611);
-            this.Controls.Add(this.button_clear);
-            this.Controls.Add(this.button_add);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.button_delete);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.button_clear);
+            this.Controls.Add(this.button_Обновить);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.radioButton_FeMale);
             this.Controls.Add(this.radioButton_Degree);
             this.Controls.Add(this.label5);
@@ -280,10 +286,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox_empId);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Margin = new System.Windows.Forms.Padding(5);
-            this.Name = "DegreeForm";
-            this.Text = "DegreeForm";
-            this.Load += new System.EventHandler(this.DegreeForm_Load);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Name = "ManageDegreeForm";
+            this.Text = "ManageDegreeForm";
+            this.Load += new System.EventHandler(this.ManageDegreeForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView_employee)).EndInit();
@@ -294,18 +300,19 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button_clear;
+        private System.Windows.Forms.Button button_Обновить;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.RadioButton radioButton_FeMale;
         private System.Windows.Forms.RadioButton radioButton_Degree;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2DataGridView DataGridView_employee;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox_empId;
-        private System.Windows.Forms.Button button_edct;
-        private System.Windows.Forms.Button button_empl;
-        private System.Windows.Forms.Button button_clear;
-        private System.Windows.Forms.Button button_add;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button_delete;
     }
 }

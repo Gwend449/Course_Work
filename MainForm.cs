@@ -185,6 +185,7 @@ namespace Course_Work
         #region grade
         private void button_Grd_addData_Click(object sender, EventArgs e)
         {
+            openChildForm(new DegreeForm());
             //...
             //...
             //...
@@ -193,6 +194,7 @@ namespace Course_Work
 
         private void button_Grd_editData_Click(object sender, EventArgs e)
         {
+            openChildForm(new ManageDegreeForm());
             //...
             //...
             //...
@@ -238,6 +240,15 @@ namespace Course_Work
         private void button_exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button_print_Click(object sender, EventArgs e)
+        {
+            openChildForm(new PrintJobActivity());
+            //...
+            //...
+            //...
+            hideSubmenu();
         }
     }
 }
