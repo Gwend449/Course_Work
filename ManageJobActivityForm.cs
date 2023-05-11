@@ -98,7 +98,6 @@ namespace Course_Work
                 decimal money = Convert.ToDecimal(textBox_salary.Text);
                 int exp = Convert.ToInt32(textBox_exp.Text);
                 string degree = textBox_grade.Text;
-
                 if (checkExper())
                 {
                     MessageBox.Show("Стаж указан неверно!", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -175,12 +174,25 @@ namespace Course_Work
                     int vacID = getIDs(empID, jobID);
                     if (MessageBox.Show("Вы уверены что хотите убрать должность?", "Удалить должность у сотрудника", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        if (vacation.deleteVacation(vacID) && jobActivity.deleteEmplJob(jobID, empID))
+                        if(vacation.checkVacation(empID))
                         {
-                            jobActivity.deleteJob(jobID);
-                            showJob();
-                            MessageBox.Show("Данные удалены!", "Удалить данные", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            button_clear.PerformClick();
+                            if (vacation.deleteVacation(vacID) && jobActivity.deleteEmplJob(jobID, empID))
+                            {
+                                jobActivity.deleteJob(jobID);
+                                showJob();
+                                MessageBox.Show("Данные удалены!", "Удалить данные", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                button_clear.PerformClick();
+                            }
+                        }
+                        if(!vacation.checkVacation(empID))
+                        {
+                            if (jobActivity.deleteEmplJob(jobID, empID))
+                            {
+                                jobActivity.deleteJob(jobID);
+                                showJob();
+                                MessageBox.Show("Данные удалены!", "Удалить данные", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                button_clear.PerformClick();
+                            }
                         }
                     }
                 }
@@ -191,10 +203,7 @@ namespace Course_Work
             }
         }
 
-        private void checkVacation()
-        {
-
-        }
+        
 
         private int getIDs(int empID, int jobID)
         {
@@ -221,7 +230,7 @@ namespace Course_Work
             checkExper();
         }
 
-        int click = 0;
+        int click = 1;
 
         private void radioButtonYes_Click(object sender, EventArgs e)
         {
@@ -235,13 +244,14 @@ namespace Course_Work
             if (click % 2 == 0)
             {
                 radioButtonYes.Checked = true;
+                radioButton2.Checked = false;
             }
             if (radioButtonYes.Checked == false)
             {
                 MessageBox.Show("Только преподаватель может иметь звание", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 textBox_grade.ReadOnly = true;
             }
-            if(radioButtonYes.Checked == true)
+            if (radioButtonYes.Checked == true)
             {
                 textBox_grade.ReadOnly = false;
             }

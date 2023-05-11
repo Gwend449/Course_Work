@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+//DBCC CHECKIDENT('TableName', RESEED, 0)
+
+
 namespace Course_Work
 {
     public partial class MainForm : Form

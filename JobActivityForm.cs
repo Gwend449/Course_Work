@@ -79,11 +79,10 @@ namespace Course_Work
                 {
                     if (jobClass.insertJob(job, money, exp, degree))
                     {
-                        showJob();
-                        button_clear.PerformClick();
-                        MessageBox.Show("Данные о должности добавлены!", "Добавить данные", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                         jobClass.insertJobToEmpl(employee_id);
+                        showJob();
+                        MessageBox.Show("Данные о должности добавлены!", "Добавить данные", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        button_clear.PerformClick();
                     }
                     else
                     {
@@ -107,30 +106,7 @@ namespace Course_Work
             showJob_Edct();
         }
 
-        int click = 0;
-        private void JobActivityForm_Click(object sender, EventArgs e)
-        {
-            click++;
-
-            if(click %2 == 1)
-            {
-                radioButtonYes.Checked = false;
-                radioButton2.Checked = true;
-            }
-            if(click %2 == 0)
-            {
-                radioButtonYes.Checked = true;
-            }
-            if (radioButtonYes.Checked == false)
-            {
-                MessageBox.Show("Только преподаватель может иметь звание", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                textBox_grade.ReadOnly = true;
-            }
-            if(radioButtonYes.Checked == true)
-            {
-                textBox_grade.ReadOnly = false;
-            }
-        }
+        
 
         private bool checkExper(int employee_id)
         {
@@ -168,6 +144,31 @@ namespace Course_Work
         {
             //int employee_id = Convert.ToInt32(textBox_empl_ID.Text);
             //checkExper(employee_id);
+        }
+        int click = 0;
+        private void radioButtonYes_Click(object sender, EventArgs e)
+        {
+            click++;
+
+            if (click % 2 == 1)
+            {
+                radioButtonYes.Checked = false;
+                radioButton2.Checked = true;
+            }
+            if (click % 2 == 0)
+            {
+                radioButtonYes.Checked = true;
+                radioButton2.Checked = false;
+            }
+            if (radioButtonYes.Checked == false)
+            {
+                MessageBox.Show("Только преподаватель может иметь звание", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                textBox_grade.ReadOnly = true;
+            }
+            if (radioButtonYes.Checked == true)
+            {
+                textBox_grade.ReadOnly = false;
+            }
         }
     }
 }

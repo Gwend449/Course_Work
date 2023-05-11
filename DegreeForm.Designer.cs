@@ -179,7 +179,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(52, 456);
+            this.label1.Location = new System.Drawing.Point(30, 458);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(137, 19);
             this.label1.TabIndex = 20;
@@ -188,7 +188,7 @@
             // textBox_Name
             // 
             this.textBox_Name.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox_Name.Location = new System.Drawing.Point(117, 454);
+            this.textBox_Name.Location = new System.Drawing.Point(173, 455);
             this.textBox_Name.Name = "textBox_Name";
             this.textBox_Name.Size = new System.Drawing.Size(165, 27);
             this.textBox_Name.TabIndex = 19;
@@ -207,7 +207,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox_Name);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "DegreeForm";
             this.Text = "DegreeForm";
             this.panel1.ResumeLayout(false);

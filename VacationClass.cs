@@ -17,6 +17,19 @@ namespace Course_Work
             return data;
         }
 
+        public bool checkVacation(int empID)
+        {
+            DataTable table = getList(new SqlCommand($"select * from Отпуск INNER JOIN Должность_сотрудника as ds ON ds.Id = Отпуск.Должность_сотрудника INNER JOIN Сотрудник ON ds.Сотрудник = Сотрудник.Id WHERE Сотрудник.Id = {empID}"));
+            if(table.Rows.Count > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public bool insertVacation(int emp_id, int duration, DateTime date, string type)
         {
             SqlCommand command = new SqlCommand("INSERT INTO [Отпуск] (Длительность, Дата, Тип, Должность_сотрудника) VALUES(@dur, @date, @type, @empid)", dataBase.getConnection);
@@ -78,5 +91,7 @@ namespace Course_Work
                 return false;
             }
         }
+
+        
     }
 }
