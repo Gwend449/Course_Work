@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{30CA7759-C17A-402F-8723-415D24FACF5A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Course_Work</RootNamespace>
+    <AssemblyName>Course_Work</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.4\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataBase.cs" />
+    <Compile Include="DegreeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DegreeForm.Designer.cs">
+      <DependentUpon>DegreeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EducationClass.cs" />
+    <Compile Include="EducationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EducationForm.Designer.cs">
+      <DependentUpon>EducationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeClass.cs" />
+    <Compile Include="JobActivityClass.cs" />
+    <Compile Include="JobActivityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JobActivityForm.Designer.cs">
+      <DependentUpon>JobActivityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageEducationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageEducationForm.Designer.cs">
+      <DependentUpon>ManageEducationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageEmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageEmployeeForm.Designer.cs">
+      <DependentUpon>ManageEmployeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageJobActivityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageJobActivityForm.Designer.cs">
+      <DependentUpon>ManageJobActivityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageVacationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageVacationForm.Designer.cs">
+      <DependentUpon>ManageVacationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintEducation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintEducation.Designer.cs">
+      <DependentUpon>PrintEducation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintEmployee.Designer.cs">
+      <DependentUpon>PrintEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrinterClass.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterForm.Designer.cs">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VacationClass.cs" />
+    <Compile Include="VacationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VacationForm.Designer.cs">
+      <DependentUpon>VacationForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DegreeForm.resx">
+      <DependentUpon>DegreeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EducationForm.resx">
+      <DependentUpon>EducationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobActivityForm.resx">
+      <DependentUpon>JobActivityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageEducationForm.resx">
+      <DependentUpon>ManageEducationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageEmployeeForm.resx">
+      <DependentUpon>ManageEmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageJobActivityForm.resx">
+      <DependentUpon>ManageJobActivityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageVacationForm.resx">
+      <DependentUpon>ManageVacationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintEducation.resx">
+      <DependentUpon>PrintEducation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintEmployee.resx">
+      <DependentUpon>PrintEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="RegisterForm.resx">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VacationForm.resx">
+      <DependentUpon>VacationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
