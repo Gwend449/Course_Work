@@ -30,9 +30,7 @@ namespace Course_Work
                 dbConnect.closeConnection();
                 return false;
             }
-
         }
-
         
         public DataTable getList(SqlCommand command)
         {
@@ -85,7 +83,7 @@ namespace Course_Work
 
         public DataTable searchEducation(string search)
         {
-            SqlCommand command = new SqlCommand("SELECT * FROM [Образование] WHERE CONCAT([Имя],[Фамилия],[Отчество]) LIKE '%" + search + "%'", dbConnect.getConnection);
+            SqlCommand command = new SqlCommand("SELECT * FROM [Сотрудник] WHERE CONCAT([Имя],[Фамилия],[Отчество]) LIKE '%" + search + "%'", dbConnect.getConnection);
             SqlDataAdapter adapter = new SqlDataAdapter(command);
             DataTable table = new DataTable();
             adapter.Fill(table);

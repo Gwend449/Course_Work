@@ -70,7 +70,12 @@ namespace Course_Work
 
         private void button_search_Click(object sender, EventArgs e)
         {
-            jobActivityClass.searchJob(textBox_search.Text);
+            DataGridView_employee.DataSource = jobActivityClass.searchJob(textBox_search.Text);
+        }
+
+        private void textBox_search_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

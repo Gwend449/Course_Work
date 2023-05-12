@@ -18,7 +18,7 @@ namespace Course_Work
 
         private void PrintEducation_Load(object sender, EventArgs e)
         {
-            showData(new SqlCommand("SELECT Образование.Id, Сотрудник.Имя, Сотрудник.Отчество, Сотрудник.Пол, Образование.[Учебное_заведение] as [Учебное заведение], Образование.Направление, Образование.[Год_окончания] FROM Сотрудник INNER JOIN[Образование] ON[Образование].[Сотрудник] = [Сотрудник].Id"));
+            showData(new SqlCommand("SELECT Образование.Id, Сотрудник.Имя, Сотрудник.Отчество, Сотрудник.Пол, Образование.[Учебное_заведение] as [Учебное заведение], Образование.Направление, Образование.[Год_окончания] as [Год окончания] FROM Сотрудник INNER JOIN[Образование] ON[Образование].[Сотрудник] = [Сотрудник].Id"));
             DataGridViewColumn column0 = DataGridView_employee.Columns[0];
             column0.Width = 35;
             DataGridViewColumn column5 = DataGridView_employee.Columns[5];
@@ -36,15 +36,15 @@ namespace Course_Work
 
             if (radioButton1.Checked)
             {
-                selectQuery = "SELECT Образование.Id, Сотрудник.Имя, Сотрудник.Отчество, Сотрудник.Пол, Образование.[Учебное_заведение], Образование.Направление, Образование.[Год_окончания] FROM Сотрудник INNER JOIN[Образование] ON[Образование].[Сотрудник] = [Сотрудник].Id";
-            }
-            else if (radioButton_FeMale.Checked)
-            {
-                selectQuery = "SELECT Образование.Id, Сотрудник.Имя, Сотрудник.Отчество, Сотрудник.Пол, Образование.[Учебное_заведение], Образование.Направление, Образование.[Год_окончания] FROM Сотрудник INNER JOIN[Образование] ON[Образование].[Сотрудник] = [Сотрудник].Id WHERE Сотрудник.[Пол] = 'Женщина'";
-            }
-            else
-            {
-                selectQuery = "SELECT Образование.Id, Сотрудник.Имя, Сотрудник.Отчество, Сотрудник.Пол, Образование.[Учебное_заведение], Образование.Направление, Образование.[Год_окончания] FROM Сотрудник INNER JOIN[Образование] ON[Образование].[Сотрудник] = [Сотрудник].Id Where Сотрудник.[Пол] = 'Мужчина'";
+                selectQuery = "SELECT Образование.Id, Сотрудник.Имя, Сотрудник.Отчество, Сотрудник.Пол, Образование.[Учебное_заведение], Образование.Направление, Образование.[Год_окончания] as [Год окончания] FROM Сотрудник INNER JOIN[Образование] ON[Образование].[Сотрудник] = [Сотрудник].Id";
+            }                                                                                                                                                                                 
+            else if (radioButton_FeMale.Checked)                                                                                                                                              
+            {                                                                                                                                                                                 
+                selectQuery = "SELECT Образование.Id, Сотрудник.Имя, Сотрудник.Отчество, Сотрудник.Пол, Образование.[Учебное_заведение], Образование.Направление, Образование.[Год_окончания] as [Год окончания] FROM Сотрудник INNER JOIN[Образование] ON[Образование].[Сотрудник] = [Сотрудник].Id WHERE Сотрудник.[Пол] = 'Женщина'";
+            }                                                                                                                                                                                 
+            else                                                                                                                                                                              
+            {                                                                                                                                                                                 
+                selectQuery = "SELECT Образование.Id, Сотрудник.Имя, Сотрудник.Отчество, Сотрудник.Пол, Образование.[Учебное_заведение], Образование.Направление, Образование.[Год_окончания] as [Год окончания] FROM Сотрудник INNER JOIN[Образование] ON[Образование].[Сотрудник] = [Сотрудник].Id Where Сотрудник.[Пол] = 'Мужчина'";
             }
             showData(new SqlCommand(selectQuery));
             printData();
@@ -67,7 +67,7 @@ namespace Course_Work
 
         private void button_search_Click(object sender, EventArgs e)
         {
-            education.searchEducation(textBox_search.Text);
+            DataGridView_employee.DataSource = education.searchEducation(textBox_search.Text);
         }
 
         private void label7_Click(object sender, EventArgs e)

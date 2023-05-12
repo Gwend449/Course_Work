@@ -68,7 +68,17 @@ namespace Course_Work
 
         private void button_search_Click(object sender, EventArgs e)
         {
-            employee.searchEmployee(textBox_search.Text);
+            try
+            {
+                DataGridView_employee.DataSource = employee.searchEmployee(textBox_search.Text);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Найти сотрудника", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            //employee.searchEmployee(textBox_search.Text);
         }
     }
 }
