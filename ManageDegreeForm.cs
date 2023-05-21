@@ -109,8 +109,7 @@ namespace Course_Work
                 }
                 catch (Exception ex)
                 {
-
-                    throw;
+                    MessageBox.Show(ex.Message, "Удалить данные", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

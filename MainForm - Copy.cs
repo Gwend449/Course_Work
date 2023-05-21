@@ -42,8 +42,6 @@ namespace Course_Work
             panel_edctSubmenu.Visible = false;
             panel_postSubmenu.Visible = false;
             panel_gradeSubmenu.Visible = false;
-            panel_VacSubMenu.Visible = false;
-            panel_viewSubMenu.Visible = false;
         }
 
         private void hideSubmenu()
@@ -56,10 +54,6 @@ namespace Course_Work
                 panel_postSubmenu.Visible = false;
             if (panel_gradeSubmenu.Visible == true)
                 panel_gradeSubmenu.Visible = false;
-            if (panel_VacSubMenu.Visible == true)
-                panel_VacSubMenu.Visible = false;
-            if (panel_viewSubMenu.Visible == true)
-                panel_viewSubMenu.Visible = false;
         }
 
         private void showSubmenu(Panel panel)
@@ -219,30 +213,12 @@ namespace Course_Work
 
         private void button_dash_Click(object sender, EventArgs e)
         {
-            showSubmenu(panel_VacSubMenu);
+            if(activeForm!=null)
+            {
+                activeForm.Close();
+            }
+            panel_main.Controls.Add(panel_cover);
         }
-
-        #region vacation
-        private void button_Post_editData_Click_1(object sender, EventArgs e)
-        {
-            openChildForm(new VacationForm());
-            //...
-            //...
-            //...
-            hideSubmenu();
-        }
-
-        private void button_Post_editVac_Click(object sender, EventArgs e)
-        {
-            openChildForm(new ManageVacationForm());
-            //...
-            //...
-            //...
-            hideSubmenu();
-        }
-        #endregion
-
-
 
         private Form activeForm = null;
         private void openChildForm(Form child)
@@ -285,22 +261,5 @@ namespace Course_Work
         {
             MessageBox.Show("Made by Nikita Lyapin FROM IS-31");
         }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            showSubmenu(panel_viewSubMenu);
-        }
-
-
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            if (activeForm != null)
-            {
-                activeForm.Close();
-            }
-            panel_main.Controls.Add(panel_cover);
-        }
-
     }
 }

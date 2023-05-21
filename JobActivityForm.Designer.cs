@@ -45,14 +45,11 @@
             this.DataGridView_employee = new Guna.UI2.WinForms.Guna2DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox_empl_ID = new System.Windows.Forms.TextBox();
-            this.radioButtonYes = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.label3 = new System.Windows.Forms.Label();
             this.textBox_salary = new System.Windows.Forms.TextBox();
             this.textBox_exp = new System.Windows.Forms.TextBox();
-            this.textBox_grade = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.datePicker = new System.Windows.Forms.DateTimePicker();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView_employee)).BeginInit();
             this.SuspendLayout();
@@ -89,13 +86,13 @@
             this.button_edct.BackColor = System.Drawing.Color.White;
             this.button_edct.FlatAppearance.BorderSize = 0;
             this.button_edct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_edct.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_edct.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_edct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
             this.button_edct.Location = new System.Drawing.Point(711, 12);
             this.button_edct.Name = "button_edct";
             this.button_edct.Size = new System.Drawing.Size(211, 42);
             this.button_edct.TabIndex = 38;
-            this.button_edct.Text = "Показать должность";
+            this.button_edct.Text = "Показать должность сотрудников";
             this.button_edct.UseVisualStyleBackColor = false;
             this.button_edct.Click += new System.EventHandler(this.button_edct_Click);
             // 
@@ -138,6 +135,7 @@
             this.button_clear.TabIndex = 47;
             this.button_clear.Text = "Очистить";
             this.button_clear.UseVisualStyleBackColor = false;
+            this.button_clear.Click += new System.EventHandler(this.button_clear_Click);
             // 
             // button_add
             // 
@@ -193,7 +191,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(377, 504);
+            this.label2.Location = new System.Drawing.Point(426, 504);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 19);
             this.label2.TabIndex = 41;
@@ -277,46 +275,10 @@
             this.textBox_empl_ID.Size = new System.Drawing.Size(165, 27);
             this.textBox_empl_ID.TabIndex = 38;
             // 
-            // radioButtonYes
-            // 
-            this.radioButtonYes.AutoSize = true;
-            this.radioButtonYes.Location = new System.Drawing.Point(183, 501);
-            this.radioButtonYes.Name = "radioButtonYes";
-            this.radioButtonYes.Size = new System.Drawing.Size(51, 25);
-            this.radioButtonYes.TabIndex = 39;
-            this.radioButtonYes.TabStop = true;
-            this.radioButtonYes.Text = "Да";
-            this.radioButtonYes.UseVisualStyleBackColor = true;
-            this.radioButtonYes.Click += new System.EventHandler(this.radioButtonYes_Click);
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(245, 501);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(55, 25);
-            this.radioButton2.TabIndex = 51;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Нет";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.Click += new System.EventHandler(this.radioButtonYes_Click);
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
-            this.label3.Location = new System.Drawing.Point(20, 503);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(145, 19);
-            this.label3.TabIndex = 52;
-            this.label3.Text = "Преподаватель :";
-            // 
             // textBox_salary
             // 
             this.textBox_salary.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox_salary.Location = new System.Drawing.Point(452, 500);
+            this.textBox_salary.Location = new System.Drawing.Point(509, 500);
             this.textBox_salary.Name = "textBox_salary";
             this.textBox_salary.Size = new System.Drawing.Size(165, 27);
             this.textBox_salary.TabIndex = 53;
@@ -329,21 +291,13 @@
             this.textBox_exp.Size = new System.Drawing.Size(165, 27);
             this.textBox_exp.TabIndex = 54;
             // 
-            // textBox_grade
-            // 
-            this.textBox_grade.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox_grade.Location = new System.Drawing.Point(378, 545);
-            this.textBox_grade.Name = "textBox_grade";
-            this.textBox_grade.Size = new System.Drawing.Size(239, 27);
-            this.textBox_grade.TabIndex = 56;
-            // 
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
-            this.label5.Location = new System.Drawing.Point(296, 549);
+            this.label5.Location = new System.Drawing.Point(20, 504);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(76, 19);
             this.label5.TabIndex = 55;
@@ -361,19 +315,36 @@
             this.datePicker.Size = new System.Drawing.Size(41, 27);
             this.datePicker.TabIndex = 39;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Лаборант",
+            "Старший Лаборант",
+            "Ассистент",
+            "Преподаватель",
+            "Старший Преподаватель",
+            "Доцент",
+            "Профессор",
+            "Зав. Кафедрой",
+            "Декан",
+            "Проректор",
+            "Ректор"});
+            this.comboBox1.Location = new System.Drawing.Point(105, 500);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(236, 29);
+            this.comboBox1.TabIndex = 57;
+            // 
             // JobActivityForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 611);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.datePicker);
-            this.Controls.Add(this.textBox_grade);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox_exp);
             this.Controls.Add(this.textBox_salary);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButtonYes);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button_clear);
@@ -414,13 +385,10 @@
         private Guna.UI2.WinForms.Guna2DataGridView DataGridView_employee;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox_empl_ID;
-        private System.Windows.Forms.RadioButton radioButtonYes;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox_salary;
         private System.Windows.Forms.TextBox textBox_exp;
-        private System.Windows.Forms.TextBox textBox_grade;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker datePicker;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

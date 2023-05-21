@@ -58,7 +58,7 @@ namespace Course_Work
         private void button_add_Click(object sender, EventArgs e)
         {
             if (textBox_job.Text == "" || textBox_salary.Text == "" || 
-                textBox_exp.Text == "" || (radioButton2.Checked == false && radioButtonYes.Checked == false))
+                textBox_exp.Text == "")
             {
                 MessageBox.Show("Заполните пустые Поля!", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -68,7 +68,7 @@ namespace Course_Work
                 string job = textBox_job.Text;
                 decimal money = Convert.ToDecimal(textBox_salary.Text);
                 int exp = Convert.ToInt32(textBox_exp.Text);
-                string degree = textBox_grade.Text;
+                string degree = comboBox1.SelectedText;
 
                 
                 if(!checkExper(employee_id))
@@ -145,31 +145,39 @@ namespace Course_Work
             //int employee_id = Convert.ToInt32(textBox_empl_ID.Text);
             //checkExper(employee_id);
         }
-        int click = 1;
-        private void radioButtonYes_Click(object sender, EventArgs e)
-        {
-            click++;
 
-            if (click % 2 == 1)
-            {
-                radioButtonYes.Checked = false;
-                radioButton2.Checked = true;
-            }
-            if (click % 2 == 0)
-            {
-                radioButtonYes.Checked = true;
-                radioButton2.Checked = false;
-            }
-            if (radioButtonYes.Checked == false)
-            {
-                MessageBox.Show("Только преподаватель может иметь звание", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                textBox_grade.ReadOnly = true;
-            }
-            if (radioButtonYes.Checked == true)
-            {
-                textBox_grade.ReadOnly = false;
-            }
+        private void button_clear_Click(object sender, EventArgs e)
+        {
+            textBox_empl_ID.Clear();
+            textBox_exp.Clear();
+            textBox_job.Clear();
+            textBox_salary.Clear();
         }
+        //int click = 1;
+        //private void radioButtonYes_Click(object sender, EventArgs e)
+        //{
+        //    click++;
+
+        //    if (click % 2 == 1)
+        //    {
+        //        radioButtonYes.Checked = false;
+        //        radioButton2.Checked = true;
+        //    }
+        //    if (click % 2 == 0)
+        //    {
+        //        radioButtonYes.Checked = true;
+        //        radioButton2.Checked = false;
+        //    }
+        //    if (radioButtonYes.Checked == false)
+        //    {
+        //        MessageBox.Show("Только преподаватель может иметь звание", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //        textBox_grade.ReadOnly = true;
+        //    }
+        //    if (radioButtonYes.Checked == true)
+        //    {
+        //        textBox_grade.ReadOnly = false;
+        //    }
+        //}
     }
 }
 

@@ -79,13 +79,13 @@
             this.button_edct.BackColor = System.Drawing.Color.White;
             this.button_edct.FlatAppearance.BorderSize = 0;
             this.button_edct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_edct.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_edct.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_edct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
             this.button_edct.Location = new System.Drawing.Point(711, 12);
             this.button_edct.Name = "button_edct";
             this.button_edct.Size = new System.Drawing.Size(211, 42);
             this.button_edct.TabIndex = 38;
-            this.button_edct.Text = "Показать образование";
+            this.button_edct.Text = "Показать образование сотрудников";
             this.button_edct.UseVisualStyleBackColor = false;
             this.button_edct.Click += new System.EventHandler(this.button_edct_Click);
             // 

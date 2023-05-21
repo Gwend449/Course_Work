@@ -126,5 +126,7 @@ namespace Course_Work
         {
             showEducation();
         }
+
+        
     }
 }

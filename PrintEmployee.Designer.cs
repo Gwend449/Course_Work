@@ -74,7 +74,7 @@
             this.radioButton_FeMale.AutoSize = true;
             this.radioButton_FeMale.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButton_FeMale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
-            this.radioButton_FeMale.Location = new System.Drawing.Point(76, 556);
+            this.radioButton_FeMale.Location = new System.Drawing.Point(299, 555);
             this.radioButton_FeMale.Name = "radioButton_FeMale";
             this.radioButton_FeMale.Size = new System.Drawing.Size(108, 23);
             this.radioButton_FeMale.TabIndex = 40;
@@ -87,7 +87,7 @@
             this.radioButton_Male.AutoSize = true;
             this.radioButton_Male.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButton_Male.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
-            this.radioButton_Male.Location = new System.Drawing.Point(296, 556);
+            this.radioButton_Male.Location = new System.Drawing.Point(169, 555);
             this.radioButton_Male.Name = "radioButton_Male";
             this.radioButton_Male.Size = new System.Drawing.Size(102, 23);
             this.radioButton_Male.TabIndex = 39;
@@ -219,7 +219,7 @@
             this.radioButton1.Checked = true;
             this.radioButton1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
-            this.radioButton1.Location = new System.Drawing.Point(212, 556);
+            this.radioButton1.Location = new System.Drawing.Point(85, 555);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(56, 23);
             this.radioButton1.TabIndex = 45;

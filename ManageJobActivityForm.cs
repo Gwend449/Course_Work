@@ -63,7 +63,7 @@ namespace Course_Work
         {
             textBox_empl_ID.Clear();
             textBox_exp.Clear();
-            textBox_grade.Clear();
+            comboBox1.SelectedIndex = -1;
             textBox_job.Clear();
             textBox_jobID.Clear();
             textBox_salary.Clear();
@@ -97,7 +97,7 @@ namespace Course_Work
                 string job = textBox_job.Text;
                 decimal money = Convert.ToDecimal(textBox_salary.Text);
                 int exp = Convert.ToInt32(textBox_exp.Text);
-                string degree = textBox_grade.Text;
+                string degree = comboBox1.SelectedText;
                 if (checkExper())
                 {
                     MessageBox.Show("Стаж указан неверно!", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -150,7 +150,7 @@ namespace Course_Work
         {
             textBox_jobID.Text = DataGridView_employee.CurrentRow.Cells[0].Value.ToString();
             textBox_job.Text = DataGridView_employee.CurrentRow.Cells[1].Value.ToString();
-            textBox_grade.Text = DataGridView_employee.CurrentRow.Cells[2].Value.ToString();
+            comboBox1.Text = DataGridView_employee.CurrentRow.Cells[2].Value.ToString();
             textBox_salary.Text = DataGridView_employee.CurrentRow.Cells[3].Value.ToString();
             textBox_exp.Text = DataGridView_employee.CurrentRow.Cells[4].Value.ToString();
             textBox_empl_ID.Text = DataGridView_employee.CurrentRow.Cells[5].Value.ToString();
@@ -230,31 +230,36 @@ namespace Course_Work
             checkExper();
         }
 
-        int click = 1;
+        //int click = 1;
 
-        private void radioButtonYes_Click(object sender, EventArgs e)
+        //private void radioButtonYes_Click(object sender, EventArgs e)
+        //{
+        //    click++;
+
+        //    if (click % 2 == 1)
+        //    {
+        //        radioButtonYes.Checked = false;
+        //        radioButton2.Checked = true;
+        //    }
+        //    if (click % 2 == 0)
+        //    {
+        //        radioButtonYes.Checked = true;
+        //        radioButton2.Checked = false;
+        //    }
+        //    if (radioButtonYes.Checked == false)
+        //    {
+        //        MessageBox.Show("Только преподаватель может иметь звание", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //        textBox_grade.ReadOnly = true;
+        //    }
+        //    if (radioButtonYes.Checked == true)
+        //    {
+        //        textBox_grade.ReadOnly = false;
+        //    }
+        //}
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            click++;
 
-            if (click % 2 == 1)
-            {
-                radioButtonYes.Checked = false;
-                radioButton2.Checked = true;
-            }
-            if (click % 2 == 0)
-            {
-                radioButtonYes.Checked = true;
-                radioButton2.Checked = false;
-            }
-            if (radioButtonYes.Checked == false)
-            {
-                MessageBox.Show("Только преподаватель может иметь звание", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                textBox_grade.ReadOnly = true;
-            }
-            if (radioButtonYes.Checked == true)
-            {
-                textBox_grade.ReadOnly = false;
-            }
         }
     }
 }
