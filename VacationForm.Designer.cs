@@ -57,13 +57,13 @@
             this.button_empl.BackColor = System.Drawing.Color.White;
             this.button_empl.FlatAppearance.BorderSize = 0;
             this.button_empl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_empl.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_empl.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_empl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
             this.button_empl.Location = new System.Drawing.Point(12, 11);
             this.button_empl.Name = "button_empl";
             this.button_empl.Size = new System.Drawing.Size(211, 42);
             this.button_empl.TabIndex = 42;
-            this.button_empl.Text = "Показать сотрудников";
+            this.button_empl.Text = "Показать сотрудников для добавления отпуска";
             this.button_empl.UseVisualStyleBackColor = false;
             this.button_empl.Click += new System.EventHandler(this.button_empl_Click_1);
             // 

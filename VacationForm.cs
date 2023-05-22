@@ -24,9 +24,9 @@ namespace Course_Work
         {
             showEmployee();
             DataGridViewColumn column0 = DataGridView_employee.Columns[0];
-            column0.Width = 35;
+            column0.Width = 100;
             DataGridViewColumn column4 = DataGridView_employee.Columns[4];
-            column4.Width = 220;
+            column4.Width = 160;
         }
 
         private void showTable()
@@ -36,7 +36,7 @@ namespace Course_Work
 
         private void showEmployee()
         {
-            DataGridView_employee.DataSource = vacation.getList(new SqlCommand("select [Должность_сотрудника].Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество, Должность.Сфера_деятельности as [Сфера деятельности], Должность.Стаж FROM [Должность_сотрудника] INNER JOIN Сотрудник ON Сотрудник.Id = Должность_сотрудника.Сотрудник INNER JOIN Должность ON Должность_сотрудника.Должность = Должность.Id"));
+            DataGridView_employee.DataSource = vacation.getList(new SqlCommand("select [Должность_сотрудника].Id as [ID Должности], Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество, Должность.Сфера_деятельности as [Сфера деятельности], Должность.Стаж FROM [Должность_сотрудника] INNER JOIN Сотрудник ON Сотрудник.Id = Должность_сотрудника.Сотрудник INNER JOIN Должность ON Должность_сотрудника.Должность = Должность.Id"));
         }
 
         private void button_edct_Click_1(object sender, EventArgs e)

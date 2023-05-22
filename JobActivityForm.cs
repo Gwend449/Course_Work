@@ -47,7 +47,7 @@ namespace Course_Work
 
         private void button_empl_Click(object sender, EventArgs e)
         {
-            showEmployee();
+            showJob_Edct();
         }
 
         private void button_edct_Click(object sender, EventArgs e)
