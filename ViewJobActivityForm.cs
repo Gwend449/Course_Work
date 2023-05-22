@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DGVPrinterHelper;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -78,6 +79,28 @@ namespace Course_Work
             {
                 (DataGridView_employee.DataSource as DataTable).DefaultView.RowFilter = $"Стаж = {Convert.ToInt32(textBox_exp.Text)}";
             }
+        }
+
+        private void button_print_Click(object sender, EventArgs e)
+        {
+            printData();
+        }
+
+        private void printData()
+        {
+            DGVPrinter helper = new DGVPrinter();
+
+            helper.Title = "Информация о Должностях сотрудников ННГАСУ";
+            helper.SubTitle = string.Format("Date: {0}", DateTime.Now.Date);
+            helper.SubTitleFormatFlags = StringFormatFlags.LineLimit | System.Drawing.StringFormatFlags.NoClip;
+            helper.PageNumbers = true;
+            helper.PageNumberInHeader = false;
+            helper.PorportionalColumns = true;
+            helper.HeaderCellAlignment = StringAlignment.Near;
+            helper.Footer = "NNGASU";
+            helper.FooterSpacing = 15;
+            helper.printDocument.DefaultPageSettings.Landscape = true;
+            helper.PrintDataGridView(DataGridView_employee);
         }
     }
 }

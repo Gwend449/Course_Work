@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DGVPrinterHelper;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -59,6 +60,28 @@ namespace Course_Work
             {
                 DataGridView_employee.DataSource = education.getList(new SqlCommand($"SELECT [Образование].Id, [Сотрудник].[Имя], [Сотрудник].[Фамилия], [Сотрудник].[Отчество], [Сотрудник].[Возраст], [Сотрудник].[Адрес], [Образование].[Учебное_заведение] as [Учебное Заведение], [Образование].[Направление], [Образование].[Год_окончания] as [Год окончания] FROM [Сотрудник] INNER JOIN [Образование] ON [Образование].[Сотрудник] = [Сотрудник].Id WHERE [Образование].[Учебное_заведение] = '{college}' AND [Образование].[Направление] = '{course}'"));
             }
+        }
+
+        private void button_print_Click(object sender, EventArgs e)
+        {
+            printData();
+        }
+
+        private void printData()
+        {
+            DGVPrinter helper = new DGVPrinter();
+
+            helper.Title = "Информация об Образовании сотрудников ННГАСУ";
+            helper.SubTitle = string.Format("Date: {0}", DateTime.Now.Date);
+            helper.SubTitleFormatFlags = StringFormatFlags.LineLimit | System.Drawing.StringFormatFlags.NoClip;
+            helper.PageNumbers = true;
+            helper.PageNumberInHeader = false;
+            helper.PorportionalColumns = true;
+            helper.HeaderCellAlignment = StringAlignment.Near;
+            helper.Footer = "NNGASU";
+            helper.FooterSpacing = 15;
+            helper.printDocument.DefaultPageSettings.Landscape = true;
+            helper.PrintDataGridView(DataGridView_employee);
         }
     }
 }

@@ -98,6 +98,7 @@
             this.button_print.TabIndex = 58;
             this.button_print.Text = "Печать";
             this.button_print.UseVisualStyleBackColor = false;
+            this.button_print.Click += new System.EventHandler(this.button_print_Click);
             // 
             // panel2
             // 
