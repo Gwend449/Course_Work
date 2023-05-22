@@ -13,7 +13,6 @@ namespace Course_Work
 {
     public partial class ViewEducationForm : Form
     {
-        EmployeeClass employee = new EmployeeClass();
         EducationClass education = new EducationClass();
 
         public ViewEducationForm()

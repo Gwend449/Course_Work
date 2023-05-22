@@ -192,7 +192,6 @@
             this.comboBox_adr.Name = "comboBox_adr";
             this.comboBox_adr.Size = new System.Drawing.Size(210, 29);
             this.comboBox_adr.TabIndex = 52;
-            this.comboBox_adr.SelectedIndexChanged += new System.EventHandler(this.comboBox_adr_SelectedIndexChanged);
             // 
             // comboBox_sex
             // 

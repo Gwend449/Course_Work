@@ -37,11 +37,6 @@ namespace Course_Work
             DataGridView_employee.DataSource = jobActivity.getList(new SqlCommand("SELECT Должность.Id as [№ Должн.], Должность.[Сфера_деятельности] as [Сфера Деятельности], Должность.Звание, Должность.Оклад, Должность.Стаж, Сотрудник.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество FROM Должность INNER JOIN [Должность_сотрудника] as DS ON DS.Должность = Должность.Id INNER JOIN Сотрудник ON DS.Сотрудник = Сотрудник.Id"));
         }
 
-        private void showEmployee()
-        {
-            DataGridView_employee.DataSource = employee.getEmployeeList();
-        }
-
         private void button_empl_Click(object sender, EventArgs e)
         {
             showJob_Empl();

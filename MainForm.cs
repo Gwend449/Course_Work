@@ -345,5 +345,32 @@ namespace Course_Work
             //.
             hideSubmenu();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            openChildForm(new PrintVacation());
+            //...
+            //..
+            //.
+            hideSubmenu();
+        }
+
+        private void button_viewJOBACT_Click(object sender, EventArgs e)
+        {
+            openChildForm(new ViewJobActivityForm());
+            //...
+            //..
+            //.
+            hideSubmenu();
+        }
+
+        private void button_viewDegree_Click(object sender, EventArgs e)
+        {
+            openChildForm(new ViewDegreeForm());
+            //...
+            //..
+            //.
+            hideSubmenu();
+        }
     }
 }

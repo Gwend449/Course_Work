@@ -37,13 +37,8 @@ namespace Course_Work
         {
             DataGridView_employee.ReadOnly = true;
             DataGridView_employee.DataSource = employee.getEmployeeList(command);
-            
         }
 
-        private void comboBox_adr_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
-        }
 
         private void button_show_Click(object sender, EventArgs e)
         {
@@ -68,10 +63,7 @@ namespace Course_Work
             else if (city == "" && sex != "")
             {
                 DataGridView_employee.DataSource = employee.getEmployeeList(new SqlCommand($"SELECT * FROM Сотрудник WHERE Пол = '{sex}'"));
-            }
-
-            
-            
+            }    
         }
     }
 }
