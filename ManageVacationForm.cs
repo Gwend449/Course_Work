@@ -27,6 +27,8 @@ namespace Course_Work
             column0.Width = 35;
             DataGridViewColumn column4 = DataGridView_employee.Columns[3];
             column4.Width = 220;
+
+
         }
 
         private void showTable()

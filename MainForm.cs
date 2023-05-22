@@ -372,5 +372,14 @@ namespace Course_Work
             //.
             hideSubmenu();
         }
+
+        private void button_viewVacation_Click(object sender, EventArgs e)
+        {
+            openChildForm(new ViewVacationForm());
+            //...
+            //..
+            //.
+            hideSubmenu();
+        }
     }
 }

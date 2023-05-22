@@ -213,6 +213,7 @@
             this.button_viewVacation.Text = "Отпуск";
             this.button_viewVacation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_viewVacation.UseVisualStyleBackColor = true;
+            this.button_viewVacation.Click += new System.EventHandler(this.button_viewVacation_Click);
             // 
             // button_view
             // 

@@ -1,6 +1,6 @@
 ﻿namespace Course_Work
 {
-    partial class ViewJobActivityForm
+    partial class ViewVacationForm
     {
         /// <summary>
         /// Required designer variable.
@@ -31,90 +31,22 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox_title = new System.Windows.Forms.ComboBox();
+            this.textBox_dur = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.comboBox_job = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.button_show = new System.Windows.Forms.Button();
             this.button_print = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.DataGridView_employee = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox_exp = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView_employee)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(301, 18);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(332, 32);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "Просмотр (должность)";
-            // 
-            // comboBox_title
-            // 
-            this.comboBox_title.FormattingEnabled = true;
-            this.comboBox_title.Items.AddRange(new object[] {
-            "Все",
-            "Мужчина",
-            "Женщина"});
-            this.comboBox_title.Location = new System.Drawing.Point(380, 568);
-            this.comboBox_title.Name = "comboBox_title";
-            this.comboBox_title.Size = new System.Drawing.Size(181, 29);
-            this.comboBox_title.TabIndex = 74;
-            // 
-            // comboBox_job
-            // 
-            this.comboBox_job.FormattingEnabled = true;
-            this.comboBox_job.Location = new System.Drawing.Point(13, 568);
-            this.comboBox_job.Name = "comboBox_job";
-            this.comboBox_job.Size = new System.Drawing.Size(340, 29);
-            this.comboBox_job.TabIndex = 73;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(376, 546);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 19);
-            this.label2.TabIndex = 72;
-            this.label2.Text = "Звание";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(9, 547);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(184, 19);
-            this.label1.TabIndex = 71;
-            this.label1.Text = "Сфера деятельности";
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
-            this.label5.Location = new System.Drawing.Point(12, 508);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(149, 19);
-            this.label5.TabIndex = 70;
-            this.label5.Text = "Сортировать по :";
             // 
             // panel1
             // 
@@ -124,7 +56,83 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(934, 67);
-            this.panel1.TabIndex = 65;
+            this.panel1.TabIndex = 77;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(258, 21);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(450, 32);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Просмотр (отпуск сотрудника)";
+            // 
+            // textBox_dur
+            // 
+            this.textBox_dur.Location = new System.Drawing.Point(405, 521);
+            this.textBox_dur.Name = "textBox_dur";
+            this.textBox_dur.Size = new System.Drawing.Size(88, 27);
+            this.textBox_dur.TabIndex = 88;
+            this.textBox_dur.TextChanged += new System.EventHandler(this.textBox_dur_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
+            this.label3.Location = new System.Drawing.Point(401, 499);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(187, 19);
+            this.label3.TabIndex = 87;
+            this.label3.Text = "Длительность (в днях)";
+            // 
+            // comboBox_job
+            // 
+            this.comboBox_job.FormattingEnabled = true;
+            this.comboBox_job.Location = new System.Drawing.Point(13, 569);
+            this.comboBox_job.Name = "comboBox_job";
+            this.comboBox_job.Size = new System.Drawing.Size(275, 29);
+            this.comboBox_job.TabIndex = 85;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
+            this.label2.Location = new System.Drawing.Point(305, 547);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(36, 19);
+            this.label2.TabIndex = 84;
+            this.label2.Text = "Тип";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
+            this.label1.Location = new System.Drawing.Point(9, 548);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(184, 19);
+            this.label1.TabIndex = 83;
+            this.label1.Text = "Сфера деятельности";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
+            this.label5.Location = new System.Drawing.Point(12, 509);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(149, 19);
+            this.label5.TabIndex = 82;
+            this.label5.Text = "Сортировать по :";
             // 
             // button_show
             // 
@@ -134,10 +142,10 @@
             this.button_show.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_show.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_show.ForeColor = System.Drawing.Color.White;
-            this.button_show.Location = new System.Drawing.Point(799, 512);
+            this.button_show.Location = new System.Drawing.Point(799, 511);
             this.button_show.Name = "button_show";
             this.button_show.Size = new System.Drawing.Size(121, 37);
-            this.button_show.TabIndex = 69;
+            this.button_show.TabIndex = 81;
             this.button_show.Text = "Показать";
             this.button_show.UseVisualStyleBackColor = false;
             this.button_show.Click += new System.EventHandler(this.button_show_Click);
@@ -150,10 +158,10 @@
             this.button_print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_print.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_print.ForeColor = System.Drawing.Color.White;
-            this.button_print.Location = new System.Drawing.Point(799, 561);
+            this.button_print.Location = new System.Drawing.Point(799, 560);
             this.button_print.Name = "button_print";
             this.button_print.Size = new System.Drawing.Size(121, 37);
-            this.button_print.TabIndex = 68;
+            this.button_print.TabIndex = 80;
             this.button_print.Text = "Печать";
             this.button_print.UseVisualStyleBackColor = false;
             // 
@@ -161,10 +169,10 @@
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
-            this.panel2.Location = new System.Drawing.Point(13, 480);
+            this.panel2.Location = new System.Drawing.Point(13, 481);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(907, 10);
-            this.panel2.TabIndex = 67;
+            this.panel2.TabIndex = 79;
             // 
             // DataGridView_employee
             // 
@@ -194,13 +202,13 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DataGridView_employee.DefaultCellStyle = dataGridViewCellStyle3;
             this.DataGridView_employee.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DataGridView_employee.Location = new System.Drawing.Point(13, 74);
+            this.DataGridView_employee.Location = new System.Drawing.Point(13, 75);
             this.DataGridView_employee.Name = "DataGridView_employee";
             this.DataGridView_employee.RowHeadersVisible = false;
             this.DataGridView_employee.RowTemplate.Height = 60;
             this.DataGridView_employee.RowTemplate.ReadOnly = true;
             this.DataGridView_employee.Size = new System.Drawing.Size(907, 400);
-            this.DataGridView_employee.TabIndex = 66;
+            this.DataGridView_employee.TabIndex = 78;
             this.DataGridView_employee.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.DataGridView_employee.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.DataGridView_employee.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
@@ -223,48 +231,43 @@
             this.DataGridView_employee.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DataGridView_employee.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // label3
+            // comboBox1
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
-            this.label3.Location = new System.Drawing.Point(602, 546);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 19);
-            this.label3.TabIndex = 75;
-            this.label3.Text = "Стаж";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Ежегодный отпуск",
+            "Отпуск без сохранения заработной платы",
+            "Отпуск по беременности",
+            "Дополнительный отпуск работникам с ненормированным рабочим днем",
+            "Дополнительный отпуск для сдачи вступительных экзаменов в аспирантуру",
+            "Дополнительный отпуск государственного  служащего за стаж работы"});
+            this.comboBox1.Location = new System.Drawing.Point(308, 570);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(478, 29);
+            this.comboBox1.TabIndex = 89;
             // 
-            // textBox_exp
-            // 
-            this.textBox_exp.Location = new System.Drawing.Point(606, 568);
-            this.textBox_exp.Name = "textBox_exp";
-            this.textBox_exp.Size = new System.Drawing.Size(88, 27);
-            this.textBox_exp.TabIndex = 76;
-            this.textBox_exp.TextChanged += new System.EventHandler(this.textBox_exp_TextChanged);
-            // 
-            // ViewJobActivityForm
+            // ViewVacationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 611);
-            this.Controls.Add(this.textBox_exp);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.textBox_dur);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox_title);
             this.Controls.Add(this.comboBox_job);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.button_show);
             this.Controls.Add(this.button_print);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.DataGridView_employee);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(5);
-            this.Name = "ViewJobActivityForm";
-            this.Text = "ViewJobActivityForm";
-            this.Load += new System.EventHandler(this.ViewJobActivityForm_Load);
+            this.Name = "ViewVacationForm";
+            this.Text = "ViewVacationForm";
+            this.Load += new System.EventHandler(this.ViewVacationForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView_employee)).EndInit();
@@ -275,18 +278,18 @@
 
         #endregion
 
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox_title;
+        private System.Windows.Forms.TextBox textBox_dur;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox_job;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button_show;
         private System.Windows.Forms.Button button_print;
         private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2DataGridView DataGridView_employee;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox_exp;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
