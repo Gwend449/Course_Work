@@ -1,6 +1,6 @@
 ﻿namespace Course_Work
 {
-    partial class ViewEmployeeForm
+    partial class ViewEducationForm
     {
         /// <summary>
         /// Required designer variable.
@@ -33,15 +33,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
+            this.button_show = new System.Windows.Forms.Button();
             this.button_print = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.DataGridView_employee = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox_course = new System.Windows.Forms.ComboBox();
+            this.comboBox_college = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox_adr = new System.Windows.Forms.ComboBox();
-            this.comboBox_sex = new System.Windows.Forms.ComboBox();
-            this.button_show = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView_employee)).BeginInit();
             this.SuspendLayout();
@@ -54,7 +54,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(934, 67);
-            this.panel1.TabIndex = 45;
+            this.panel1.TabIndex = 55;
             // 
             // label7
             // 
@@ -68,6 +68,22 @@
             this.label7.TabIndex = 18;
             this.label7.Text = "Просмотр (сотрудники)";
             // 
+            // button_show
+            // 
+            this.button_show.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_show.BackColor = System.Drawing.Color.MediumBlue;
+            this.button_show.FlatAppearance.BorderSize = 0;
+            this.button_show.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_show.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_show.ForeColor = System.Drawing.Color.White;
+            this.button_show.Location = new System.Drawing.Point(799, 514);
+            this.button_show.Name = "button_show";
+            this.button_show.Size = new System.Drawing.Size(121, 37);
+            this.button_show.TabIndex = 59;
+            this.button_show.Text = "Показать";
+            this.button_show.UseVisualStyleBackColor = false;
+            this.button_show.Click += new System.EventHandler(this.button_show_Click);
+            // 
             // button_print
             // 
             this.button_print.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -76,10 +92,10 @@
             this.button_print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_print.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_print.ForeColor = System.Drawing.Color.White;
-            this.button_print.Location = new System.Drawing.Point(799, 562);
+            this.button_print.Location = new System.Drawing.Point(799, 563);
             this.button_print.Name = "button_print";
             this.button_print.Size = new System.Drawing.Size(121, 37);
-            this.button_print.TabIndex = 48;
+            this.button_print.TabIndex = 58;
             this.button_print.Text = "Печать";
             this.button_print.UseVisualStyleBackColor = false;
             // 
@@ -87,10 +103,10 @@
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
-            this.panel2.Location = new System.Drawing.Point(13, 480);
+            this.panel2.Location = new System.Drawing.Point(13, 486);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(907, 10);
-            this.panel2.TabIndex = 47;
+            this.panel2.TabIndex = 57;
             // 
             // DataGridView_employee
             // 
@@ -120,13 +136,13 @@
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DataGridView_employee.DefaultCellStyle = dataGridViewCellStyle6;
             this.DataGridView_employee.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DataGridView_employee.Location = new System.Drawing.Point(13, 74);
+            this.DataGridView_employee.Location = new System.Drawing.Point(13, 80);
             this.DataGridView_employee.Name = "DataGridView_employee";
             this.DataGridView_employee.RowHeadersVisible = false;
             this.DataGridView_employee.RowTemplate.Height = 60;
             this.DataGridView_employee.RowTemplate.ReadOnly = true;
             this.DataGridView_employee.Size = new System.Drawing.Size(907, 400);
-            this.DataGridView_employee.TabIndex = 46;
+            this.DataGridView_employee.TabIndex = 56;
             this.DataGridView_employee.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.DataGridView_employee.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.DataGridView_employee.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
@@ -149,29 +165,25 @@
             this.DataGridView_employee.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DataGridView_employee.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // label5
+            // comboBox_course
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
-            this.label5.Location = new System.Drawing.Point(12, 508);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(149, 19);
-            this.label5.TabIndex = 49;
-            this.label5.Text = "Сортировать по :";
+            this.comboBox_course.FormattingEnabled = true;
+            this.comboBox_course.Items.AddRange(new object[] {
+            "Все",
+            "Мужчина",
+            "Женщина"});
+            this.comboBox_course.Location = new System.Drawing.Point(325, 563);
+            this.comboBox_course.Name = "comboBox_course";
+            this.comboBox_course.Size = new System.Drawing.Size(400, 29);
+            this.comboBox_course.TabIndex = 64;
             // 
-            // label1
+            // comboBox_college
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(12, 541);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 19);
-            this.label1.TabIndex = 50;
-            this.label1.Text = "Адрес проживания";
+            this.comboBox_college.FormattingEnabled = true;
+            this.comboBox_college.Location = new System.Drawing.Point(13, 563);
+            this.comboBox_college.Name = "comboBox_college";
+            this.comboBox_college.Size = new System.Drawing.Size(210, 29);
+            this.comboBox_college.TabIndex = 63;
             // 
             // label2
             // 
@@ -179,69 +191,56 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(324, 541);
+            this.label2.Location = new System.Drawing.Point(321, 542);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 19);
-            this.label2.TabIndex = 51;
-            this.label2.Text = "Пол";
+            this.label2.Size = new System.Drawing.Size(121, 19);
+            this.label2.TabIndex = 62;
+            this.label2.Text = "Направление";
             // 
-            // comboBox_adr
+            // label1
             // 
-            this.comboBox_adr.FormattingEnabled = true;
-            this.comboBox_adr.Location = new System.Drawing.Point(16, 562);
-            this.comboBox_adr.Name = "comboBox_adr";
-            this.comboBox_adr.Size = new System.Drawing.Size(210, 29);
-            this.comboBox_adr.TabIndex = 52;
-            this.comboBox_adr.SelectedIndexChanged += new System.EventHandler(this.comboBox_adr_SelectedIndexChanged);
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
+            this.label1.Location = new System.Drawing.Point(9, 542);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(169, 19);
+            this.label1.TabIndex = 61;
+            this.label1.Text = "Учебное заведение";
             // 
-            // comboBox_sex
+            // label5
             // 
-            this.comboBox_sex.FormattingEnabled = true;
-            this.comboBox_sex.Items.AddRange(new object[] {
-            "Все",
-            "Мужчина",
-            "Женщина"});
-            this.comboBox_sex.Location = new System.Drawing.Point(328, 562);
-            this.comboBox_sex.Name = "comboBox_sex";
-            this.comboBox_sex.Size = new System.Drawing.Size(170, 29);
-            this.comboBox_sex.TabIndex = 53;
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
+            this.label5.Location = new System.Drawing.Point(9, 509);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(149, 19);
+            this.label5.TabIndex = 60;
+            this.label5.Text = "Сортировать по :";
             // 
-            // button_show
-            // 
-            this.button_show.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_show.BackColor = System.Drawing.Color.MediumBlue;
-            this.button_show.FlatAppearance.BorderSize = 0;
-            this.button_show.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_show.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_show.ForeColor = System.Drawing.Color.White;
-            this.button_show.Location = new System.Drawing.Point(799, 508);
-            this.button_show.Name = "button_show";
-            this.button_show.Size = new System.Drawing.Size(121, 37);
-            this.button_show.TabIndex = 54;
-            this.button_show.Text = "Показать";
-            this.button_show.UseVisualStyleBackColor = false;
-            this.button_show.Click += new System.EventHandler(this.button_show_Click);
-            // 
-            // ViewEmployeeForm
+            // ViewEducationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 611);
-            this.Controls.Add(this.button_show);
-            this.Controls.Add(this.comboBox_sex);
-            this.Controls.Add(this.comboBox_adr);
+            this.Controls.Add(this.comboBox_course);
+            this.Controls.Add(this.comboBox_college);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.button_show);
             this.Controls.Add(this.button_print);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.DataGridView_employee);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Margin = new System.Windows.Forms.Padding(5);
-            this.Name = "ViewEmployeeForm";
-            this.Text = "ViewEmployeeForm";
-            this.Load += new System.EventHandler(this.ViewEmployeeForm_Load);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Name = "ViewEducationForm";
+            this.Text = "ViewEducationForm";
+            this.Load += new System.EventHandler(this.ViewEducationForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView_employee)).EndInit();
@@ -254,14 +253,14 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button_show;
         private System.Windows.Forms.Button button_print;
         private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2DataGridView DataGridView_employee;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox_course;
+        private System.Windows.Forms.ComboBox comboBox_college;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox_adr;
-        private System.Windows.Forms.ComboBox comboBox_sex;
-        private System.Windows.Forms.Button button_show;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label5;
     }
 }

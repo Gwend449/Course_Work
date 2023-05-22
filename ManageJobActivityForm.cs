@@ -34,7 +34,7 @@ namespace Course_Work
 
         private void showJob_Empl()
         {
-            DataGridView_employee.DataSource = jobActivity.getList(new SqlCommand("SELECT Должность.Id as [№ Должн.], Должность.[Сфера_деятельности], Должность.Звание, Должность.Оклад, Должность.Стаж, Сотрудник.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество FROM Должность INNER JOIN [Должность_сотрудника] as DS ON DS.Должность = Должность.Id INNER JOIN Сотрудник ON DS.Сотрудник = Сотрудник.Id"));
+            DataGridView_employee.DataSource = jobActivity.getList(new SqlCommand("SELECT Должность.Id as [№ Должн.], Должность.[Сфера_деятельности] as [Сфера Деятельности], Должность.Звание, Должность.Оклад, Должность.Стаж, Сотрудник.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество FROM Должность INNER JOIN [Должность_сотрудника] as DS ON DS.Должность = Должность.Id INNER JOIN Сотрудник ON DS.Сотрудник = Сотрудник.Id"));
         }
 
         private void showEmployee()
@@ -44,8 +44,12 @@ namespace Course_Work
 
         private void button_empl_Click(object sender, EventArgs e)
         {
-            showEmployee();
-            textBox_search.ReadOnly = true;
+            showJob_Empl();
+            textBox_search.ReadOnly = false;
+            DataGridViewColumn column0 = DataGridView_employee.Columns[0];
+            column0.Width = 70;
+            DataGridViewColumn column4 = DataGridView_employee.Columns[5];
+            column4.Width = 35;
         }
 
         private void showJob()
@@ -257,9 +261,6 @@ namespace Course_Work
         //    }
         //}
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

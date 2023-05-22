@@ -83,7 +83,7 @@ namespace Course_Work
 
         public DataTable searchEducation(string search)
         {
-            SqlCommand command = new SqlCommand("SELECT * FROM [Сотрудник] WHERE CONCAT([Имя],[Фамилия],[Отчество]) LIKE '%" + search + "%'", dbConnect.getConnection);
+            SqlCommand command = new SqlCommand("SELECT Образование.Id, Сотрудник.Имя, Сотрудник.Отчество, Сотрудник.Пол, Образование.[Учебное_заведение] as [Учебное заведение], Образование.Направление, Образование.[Год_окончания] as [Год окончания] FROM Сотрудник INNER JOIN [Образование] ON [Образование].[Сотрудник] = [Сотрудник].Id WHERE CONCAT([Имя],[Фамилия],[Отчество]) LIKE '%" + search + "%'", dbConnect.getConnection);
             SqlDataAdapter adapter = new SqlDataAdapter(command);
             DataTable table = new DataTable();
             adapter.Fill(table);

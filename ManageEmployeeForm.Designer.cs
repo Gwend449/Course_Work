@@ -55,6 +55,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.textBox_id = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView_employee)).BeginInit();
             this.SuspendLayout();
@@ -381,11 +382,24 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 27);
             this.dateTimePicker1.TabIndex = 42;
             // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
+            this.label9.Location = new System.Drawing.Point(477, 74);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(145, 19);
+            this.label9.TabIndex = 43;
+            this.label9.Text = "(Поиск по Ф.И.О)";
+            // 
             // ManageEmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 611);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox_id);
@@ -448,5 +462,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox_id;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label9;
     }
 }

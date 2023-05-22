@@ -42,6 +42,7 @@
             this.button_search = new System.Windows.Forms.Button();
             this.button_print = new System.Windows.Forms.Button();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView_employee)).BeginInit();
             this.SuspendLayout();
@@ -227,11 +228,24 @@
             this.radioButton1.Text = "Все";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
+            this.label9.Location = new System.Drawing.Point(444, 85);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(145, 19);
+            this.label9.TabIndex = 46;
+            this.label9.Text = "(Поиск по Ф.И.О)";
+            // 
             // PrintEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 611);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.button_print);
             this.Controls.Add(this.textBox_search);
@@ -268,5 +282,6 @@
         private System.Windows.Forms.Button button_search;
         private System.Windows.Forms.Button button_print;
         private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Label label9;
     }
 }

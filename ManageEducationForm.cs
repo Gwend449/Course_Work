@@ -23,6 +23,7 @@ namespace Course_Work
 
         private void ManageEducationForm_Load(object sender, EventArgs e)
         {
+            DataGridView_employee.ReadOnly = false;
             showEducation();
             DataGridViewColumn column0 = DataGridView_employee.Columns[0];
             column0.Width = 35;
@@ -115,6 +116,7 @@ namespace Course_Work
         private void button_empl_Click(object sender, EventArgs e)
         {
             showEmployee();
+            DataGridView_employee.ReadOnly = true;
         }
 
         private void button_search_Click(object sender, EventArgs e)
@@ -125,6 +127,7 @@ namespace Course_Work
         private void button_edct_Click(object sender, EventArgs e)
         {
             showEducation();
+            DataGridView_employee.ReadOnly = true;
         }
 
         

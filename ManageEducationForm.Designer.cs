@@ -51,6 +51,7 @@
             this.textBox_search = new System.Windows.Forms.TextBox();
             this.button_search = new System.Windows.Forms.Button();
             this.button_delete = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView_employee)).BeginInit();
             this.SuspendLayout();
@@ -338,11 +339,24 @@
             this.button_delete.UseVisualStyleBackColor = false;
             this.button_delete.Click += new System.EventHandler(this.button_delete_Click);
             // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
+            this.label9.Location = new System.Drawing.Point(474, 79);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(145, 19);
+            this.label9.TabIndex = 56;
+            this.label9.Text = "(Поиск по Ф.И.О)";
+            // 
             // ManageEducationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 611);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.button_delete);
             this.Controls.Add(this.textBox_search);
             this.Controls.Add(this.button_search);
@@ -395,5 +409,6 @@
         private System.Windows.Forms.TextBox textBox_search;
         private System.Windows.Forms.Button button_search;
         private System.Windows.Forms.Button button_delete;
+        private System.Windows.Forms.Label label9;
     }
 }

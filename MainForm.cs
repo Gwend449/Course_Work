@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -20,14 +21,30 @@ namespace Course_Work
 
         public MainForm()
         {
+            //Thread t = new Thread(new ThreadStart(Loading));
+            //t.Start();
+            
+            //for (int i = 0; i < 200; i++)
+            //{
+            //    Thread.Sleep(10);
+            //}
+            //t.Abort();
             InitializeComponent();
             customDesign();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            WindowState = FormWindowState.Normal;
             emplCount();
         }
+
+        void Loading()
+        {
+            SplashForm splashForm = new SplashForm();
+            Application.Run(splashForm);
+        }
+
 
         private void emplCount()
         {
@@ -302,5 +319,31 @@ namespace Course_Work
             panel_main.Controls.Add(panel_cover);
         }
 
+        private void button_viewEmp_Click(object sender, EventArgs e)
+        {
+            openChildForm(new ViewEmployeeForm());
+            //...
+            //...
+            //...
+            hideSubmenu();
+        }
+
+        private void MainForm_FormClosing(Object sender, FormClosingEventArgs e)
+        {
+            if(e.CloseReason == CloseReason.UserClosing)
+            {
+                e.Cancel = false;
+                Application.Exit();
+            }
+        }
+
+        private void button_viewEdct_Click(object sender, EventArgs e)
+        {
+            openChildForm(new ViewEducationForm());
+            //...
+            //..
+            //.
+            hideSubmenu();
+        }
     }
 }

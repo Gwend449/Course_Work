@@ -45,7 +45,7 @@ namespace Course_Work
         private void printData()
         {
             helper.Title = "Информация о Учёной степени сотрудников ННГАСУ";
-            helper.SubTitle = string.Format("Date: (0)", DateTime.Now.Date);
+            helper.SubTitle = string.Format("Date: {0}", DateTime.Now.Date);
             helper.SubTitleFormatFlags = StringFormatFlags.LineLimit | System.Drawing.StringFormatFlags.NoClip;
             helper.PageNumbers = true;
             helper.PageNumberInHeader = false;

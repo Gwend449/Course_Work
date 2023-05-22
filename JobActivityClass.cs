@@ -166,7 +166,7 @@ namespace Course_Work
 
         public DataTable searchJob(string search)
         {
-            SqlCommand command = new SqlCommand("SELECT Должность.Id as [№ Должн.], Должность.[Сфера_деятельности], Сотрудник.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество FROM Сотрудник INNER JOIN [Должность_сотрудника] as DS ON DS.Сотрудник = Сотрудник.Id INNER JOIN Должность ON DS.Должность = Должность.Id WHERE CONCAT(Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество) LIKE '%" + search + "%'", dataBase.getConnection);
+            SqlCommand command = new SqlCommand("SELECT Должность.Id as [№ Должн.], Должность.[Сфера_деятельности], Должность.Звание, Должность.Оклад, Должность.Стаж, Сотрудник.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество FROM Должность INNER JOIN [Должность_сотрудника] as DS ON DS.Должность = Должность.Id INNER JOIN Сотрудник ON DS.Сотрудник = Сотрудник.Id WHERE CONCAT(Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество) LIKE '%" + search + "%'", dataBase.getConnection);
             SqlDataAdapter adapter = new SqlDataAdapter(command);
             DataTable table = new DataTable();
             adapter.Fill(table);

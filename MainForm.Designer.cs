@@ -32,9 +32,9 @@
             this.panel_slide = new System.Windows.Forms.Panel();
             this.button_main = new System.Windows.Forms.Button();
             this.panel_viewSubMenu = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.button_viewEdct = new System.Windows.Forms.Button();
+            this.button_viewEmp = new System.Windows.Forms.Button();
+            this.button_viewDegree = new System.Windows.Forms.Button();
             this.button_view = new System.Windows.Forms.Button();
             this.panel_VacSubMenu = new System.Windows.Forms.Panel();
             this.button_Post_editVac = new System.Windows.Forms.Button();
@@ -76,6 +76,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.button_viewJOBACT = new System.Windows.Forms.Button();
             this.panel_slide.SuspendLayout();
             this.panel_viewSubMenu.SuspendLayout();
             this.panel_VacSubMenu.SuspendLayout();
@@ -125,7 +126,7 @@
             this.button_main.FlatAppearance.BorderSize = 0;
             this.button_main.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_main.ForeColor = System.Drawing.Color.White;
-            this.button_main.Location = new System.Drawing.Point(0, 1375);
+            this.button_main.Location = new System.Drawing.Point(0, 1426);
             this.button_main.Name = "button_main";
             this.button_main.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button_main.Size = new System.Drawing.Size(186, 55);
@@ -138,59 +139,62 @@
             // panel_viewSubMenu
             // 
             this.panel_viewSubMenu.BackColor = System.Drawing.Color.DarkOrange;
-            this.panel_viewSubMenu.Controls.Add(this.button2);
-            this.panel_viewSubMenu.Controls.Add(this.button3);
-            this.panel_viewSubMenu.Controls.Add(this.button4);
+            this.panel_viewSubMenu.Controls.Add(this.button_viewJOBACT);
+            this.panel_viewSubMenu.Controls.Add(this.button_viewEdct);
+            this.panel_viewSubMenu.Controls.Add(this.button_viewEmp);
+            this.panel_viewSubMenu.Controls.Add(this.button_viewDegree);
             this.panel_viewSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_viewSubMenu.Location = new System.Drawing.Point(0, 1223);
             this.panel_viewSubMenu.Name = "panel_viewSubMenu";
-            this.panel_viewSubMenu.Size = new System.Drawing.Size(186, 152);
+            this.panel_viewSubMenu.Size = new System.Drawing.Size(186, 203);
             this.panel_viewSubMenu.TabIndex = 12;
             // 
-            // button2
+            // button_viewEdct
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(0, 50);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(186, 50);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Изменить данные (отпуск)";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = true;
+            this.button_viewEdct.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button_viewEdct.FlatAppearance.BorderSize = 0;
+            this.button_viewEdct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_viewEdct.ForeColor = System.Drawing.Color.White;
+            this.button_viewEdct.Location = new System.Drawing.Point(0, 50);
+            this.button_viewEdct.Name = "button_viewEdct";
+            this.button_viewEdct.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.button_viewEdct.Size = new System.Drawing.Size(186, 50);
+            this.button_viewEdct.TabIndex = 4;
+            this.button_viewEdct.Text = "Образование";
+            this.button_viewEdct.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_viewEdct.UseVisualStyleBackColor = true;
+            this.button_viewEdct.Click += new System.EventHandler(this.button_viewEdct_Click);
             // 
-            // button3
+            // button_viewEmp
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(0, 0);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(186, 50);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Добавить данные";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = true;
+            this.button_viewEmp.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button_viewEmp.FlatAppearance.BorderSize = 0;
+            this.button_viewEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_viewEmp.ForeColor = System.Drawing.Color.White;
+            this.button_viewEmp.Location = new System.Drawing.Point(0, 0);
+            this.button_viewEmp.Name = "button_viewEmp";
+            this.button_viewEmp.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.button_viewEmp.Size = new System.Drawing.Size(186, 50);
+            this.button_viewEmp.TabIndex = 3;
+            this.button_viewEmp.Text = "Сотрудник";
+            this.button_viewEmp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_viewEmp.UseVisualStyleBackColor = true;
+            this.button_viewEmp.Click += new System.EventHandler(this.button_viewEmp_Click);
             // 
-            // button4
+            // button_viewDegree
             // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(0, 102);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(186, 50);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "Печать";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = true;
+            this.button_viewDegree.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button_viewDegree.FlatAppearance.BorderSize = 0;
+            this.button_viewDegree.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_viewDegree.ForeColor = System.Drawing.Color.White;
+            this.button_viewDegree.Location = new System.Drawing.Point(0, 153);
+            this.button_viewDegree.Name = "button_viewDegree";
+            this.button_viewDegree.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.button_viewDegree.Size = new System.Drawing.Size(186, 50);
+            this.button_viewDegree.TabIndex = 2;
+            this.button_viewDegree.Text = "Степень";
+            this.button_viewDegree.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_viewDegree.UseVisualStyleBackColor = true;
             // 
             // button_view
             // 
@@ -275,7 +279,7 @@
             this.button_exit.FlatAppearance.BorderSize = 0;
             this.button_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_exit.ForeColor = System.Drawing.Color.White;
-            this.button_exit.Location = new System.Drawing.Point(0, 1430);
+            this.button_exit.Location = new System.Drawing.Point(0, 1481);
             this.button_exit.Name = "button_exit";
             this.button_exit.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button_exit.Size = new System.Drawing.Size(186, 55);
@@ -765,6 +769,21 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Nikita\'s Lyapin Work";
             // 
+            // button_viewJOBACT
+            // 
+            this.button_viewJOBACT.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button_viewJOBACT.FlatAppearance.BorderSize = 0;
+            this.button_viewJOBACT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_viewJOBACT.ForeColor = System.Drawing.Color.White;
+            this.button_viewJOBACT.Location = new System.Drawing.Point(0, 103);
+            this.button_viewJOBACT.Name = "button_viewJOBACT";
+            this.button_viewJOBACT.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.button_viewJOBACT.Size = new System.Drawing.Size(186, 50);
+            this.button_viewJOBACT.TabIndex = 5;
+            this.button_viewJOBACT.Text = "Должность";
+            this.button_viewJOBACT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_viewJOBACT.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -847,9 +866,10 @@
         private System.Windows.Forms.Button button_Post_editData;
         private System.Windows.Forms.Button button_main;
         private System.Windows.Forms.Panel panel_viewSubMenu;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button_viewEdct;
+        private System.Windows.Forms.Button button_viewEmp;
+        private System.Windows.Forms.Button button_viewDegree;
+        private System.Windows.Forms.Button button_viewJOBACT;
     }
 }
 

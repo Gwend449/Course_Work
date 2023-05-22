@@ -1,6 +1,6 @@
 ﻿namespace Course_Work
 {
-    partial class PrintJobActivity
+    partial class ViewJobActivityForm
     {
         /// <summary>
         /// Required designer variable.
@@ -31,21 +31,88 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.radioButton_Male = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.button_print = new System.Windows.Forms.Button();
-            this.textBox_search = new System.Windows.Forms.TextBox();
-            this.button_search = new System.Windows.Forms.Button();
-            this.radioButton_FeMale = new System.Windows.Forms.RadioButton();
+            this.comboBox_course = new System.Windows.Forms.ComboBox();
+            this.comboBox_college = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.DataGridView_employee = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button_show = new System.Windows.Forms.Button();
+            this.button_print = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
+            this.DataGridView_employee = new Guna.UI2.WinForms.Guna2DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView_employee)).BeginInit();
             this.SuspendLayout();
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(301, 18);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(345, 32);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Просмотр (сотрудники)";
+            // 
+            // comboBox_course
+            // 
+            this.comboBox_course.FormattingEnabled = true;
+            this.comboBox_course.Items.AddRange(new object[] {
+            "Все",
+            "Мужчина",
+            "Женщина"});
+            this.comboBox_course.Location = new System.Drawing.Point(325, 568);
+            this.comboBox_course.Name = "comboBox_course";
+            this.comboBox_course.Size = new System.Drawing.Size(400, 29);
+            this.comboBox_course.TabIndex = 74;
+            // 
+            // comboBox_college
+            // 
+            this.comboBox_college.FormattingEnabled = true;
+            this.comboBox_college.Location = new System.Drawing.Point(13, 568);
+            this.comboBox_college.Name = "comboBox_college";
+            this.comboBox_college.Size = new System.Drawing.Size(210, 29);
+            this.comboBox_college.TabIndex = 73;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
+            this.label2.Location = new System.Drawing.Point(321, 547);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(121, 19);
+            this.label2.TabIndex = 72;
+            this.label2.Text = "Направление";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
+            this.label1.Location = new System.Drawing.Point(9, 547);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(169, 19);
+            this.label1.TabIndex = 71;
+            this.label1.Text = "Учебное заведение";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
+            this.label5.Location = new System.Drawing.Point(9, 514);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(149, 19);
+            this.label5.TabIndex = 70;
+            this.label5.Text = "Сортировать по :";
             // 
             // panel1
             // 
@@ -55,47 +122,22 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(934, 67);
-            this.panel1.TabIndex = 56;
+            this.panel1.TabIndex = 65;
             // 
-            // label7
+            // button_show
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(334, 18);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(288, 32);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "Печать (должность)";
-            // 
-            // radioButton_Male
-            // 
-            this.radioButton_Male.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton_Male.AutoSize = true;
-            this.radioButton_Male.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton_Male.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
-            this.radioButton_Male.Location = new System.Drawing.Point(169, 555);
-            this.radioButton_Male.Name = "radioButton_Male";
-            this.radioButton_Male.Size = new System.Drawing.Size(102, 23);
-            this.radioButton_Male.TabIndex = 59;
-            this.radioButton_Male.Text = "Мужчина";
-            this.radioButton_Male.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
-            this.radioButton1.Location = new System.Drawing.Point(85, 555);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(56, 23);
-            this.radioButton1.TabIndex = 64;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Все";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.button_show.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_show.BackColor = System.Drawing.Color.MediumBlue;
+            this.button_show.FlatAppearance.BorderSize = 0;
+            this.button_show.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_show.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_show.ForeColor = System.Drawing.Color.White;
+            this.button_show.Location = new System.Drawing.Point(799, 519);
+            this.button_show.Name = "button_show";
+            this.button_show.Size = new System.Drawing.Size(121, 37);
+            this.button_show.TabIndex = 69;
+            this.button_show.Text = "Показать";
+            this.button_show.UseVisualStyleBackColor = false;
             // 
             // button_print
             // 
@@ -105,63 +147,21 @@
             this.button_print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_print.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_print.ForeColor = System.Drawing.Color.White;
-            this.button_print.Location = new System.Drawing.Point(799, 556);
+            this.button_print.Location = new System.Drawing.Point(799, 568);
             this.button_print.Name = "button_print";
             this.button_print.Size = new System.Drawing.Size(121, 37);
-            this.button_print.TabIndex = 63;
+            this.button_print.TabIndex = 68;
             this.button_print.Text = "Печать";
             this.button_print.UseVisualStyleBackColor = false;
-            this.button_print.Click += new System.EventHandler(this.button_print_Click);
             // 
-            // textBox_search
+            // panel2
             // 
-            this.textBox_search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_search.Location = new System.Drawing.Point(595, 81);
-            this.textBox_search.Name = "textBox_search";
-            this.textBox_search.Size = new System.Drawing.Size(195, 27);
-            this.textBox_search.TabIndex = 62;
-            this.textBox_search.TextChanged += new System.EventHandler(this.textBox_search_TextChanged);
-            // 
-            // button_search
-            // 
-            this.button_search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_search.BackColor = System.Drawing.Color.MediumBlue;
-            this.button_search.FlatAppearance.BorderSize = 0;
-            this.button_search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_search.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_search.ForeColor = System.Drawing.Color.White;
-            this.button_search.Location = new System.Drawing.Point(803, 77);
-            this.button_search.Name = "button_search";
-            this.button_search.Size = new System.Drawing.Size(121, 37);
-            this.button_search.TabIndex = 61;
-            this.button_search.Text = "Искать";
-            this.button_search.UseVisualStyleBackColor = false;
-            this.button_search.Click += new System.EventHandler(this.button_search_Click);
-            // 
-            // radioButton_FeMale
-            // 
-            this.radioButton_FeMale.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton_FeMale.AutoSize = true;
-            this.radioButton_FeMale.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton_FeMale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
-            this.radioButton_FeMale.Location = new System.Drawing.Point(299, 555);
-            this.radioButton_FeMale.Name = "radioButton_FeMale";
-            this.radioButton_FeMale.Size = new System.Drawing.Size(108, 23);
-            this.radioButton_FeMale.TabIndex = 60;
-            this.radioButton_FeMale.Text = "Женщина";
-            this.radioButton_FeMale.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
-            this.label5.Location = new System.Drawing.Point(20, 556);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 19);
-            this.label5.TabIndex = 58;
-            this.label5.Text = "Пол :";
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
+            this.panel2.Location = new System.Drawing.Point(13, 491);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(907, 10);
+            this.panel2.TabIndex = 67;
             // 
             // DataGridView_employee
             // 
@@ -180,7 +180,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DataGridView_employee.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.DataGridView_employee.ColumnHeadersHeight = 34;
+            this.DataGridView_employee.ColumnHeadersHeight = 48;
             this.DataGridView_employee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -191,13 +191,13 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DataGridView_employee.DefaultCellStyle = dataGridViewCellStyle3;
             this.DataGridView_employee.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DataGridView_employee.Location = new System.Drawing.Point(13, 122);
+            this.DataGridView_employee.Location = new System.Drawing.Point(13, 85);
             this.DataGridView_employee.Name = "DataGridView_employee";
             this.DataGridView_employee.RowHeadersVisible = false;
             this.DataGridView_employee.RowTemplate.Height = 60;
             this.DataGridView_employee.RowTemplate.ReadOnly = true;
             this.DataGridView_employee.Size = new System.Drawing.Size(907, 400);
-            this.DataGridView_employee.TabIndex = 57;
+            this.DataGridView_employee.TabIndex = 66;
             this.DataGridView_employee.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.DataGridView_employee.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.DataGridView_employee.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
@@ -210,7 +210,7 @@
             this.DataGridView_employee.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.DataGridView_employee.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.DataGridView_employee.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.DataGridView_employee.ThemeStyle.HeaderStyle.Height = 34;
+            this.DataGridView_employee.ThemeStyle.HeaderStyle.Height = 48;
             this.DataGridView_employee.ThemeStyle.ReadOnly = false;
             this.DataGridView_employee.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.DataGridView_employee.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -220,48 +220,25 @@
             this.DataGridView_employee.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DataGridView_employee.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
-            this.panel2.Location = new System.Drawing.Point(13, 529);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(907, 10);
-            this.panel2.TabIndex = 65;
-            // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
-            this.label9.Location = new System.Drawing.Point(444, 86);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(145, 19);
-            this.label9.TabIndex = 66;
-            this.label9.Text = "(Поиск по Ф.И.О)";
-            // 
-            // PrintJobActivity
+            // ViewJobActivityForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 611);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.radioButton_Male);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.button_print);
-            this.Controls.Add(this.textBox_search);
-            this.Controls.Add(this.button_search);
-            this.Controls.Add(this.radioButton_FeMale);
+            this.Controls.Add(this.comboBox_course);
+            this.Controls.Add(this.comboBox_college);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.label5);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.button_show);
+            this.Controls.Add(this.button_print);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.DataGridView_employee);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Margin = new System.Windows.Forms.Padding(5);
-            this.Name = "PrintJobActivity";
-            this.Text = "PrintJobActivity";
-            this.Load += new System.EventHandler(this.PrintJobActivity_Load);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Name = "ViewJobActivityForm";
+            this.Text = "ViewJobActivityForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView_employee)).EndInit();
@@ -272,17 +249,16 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.RadioButton radioButton_Male;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Button button_print;
-        private System.Windows.Forms.TextBox textBox_search;
-        private System.Windows.Forms.Button button_search;
-        private System.Windows.Forms.RadioButton radioButton_FeMale;
+        private System.Windows.Forms.ComboBox comboBox_course;
+        private System.Windows.Forms.ComboBox comboBox_college;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
-        private Guna.UI2.WinForms.Guna2DataGridView DataGridView_employee;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button_show;
+        private System.Windows.Forms.Button button_print;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label9;
+        private Guna.UI2.WinForms.Guna2DataGridView DataGridView_employee;
     }
 }
