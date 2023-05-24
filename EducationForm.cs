@@ -42,8 +42,16 @@ namespace Course_Work
 
         private void DataGridView_employee_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            textBox_empl_ID.Text = DataGridView_employee.CurrentRow.Cells[0].Value.ToString();
-            dateTimePicker_empl.Value = (DateTime)DataGridView_employee.CurrentRow.Cells[4].Value;
+            try
+            {
+                textBox_empl_ID.Text = DataGridView_employee.CurrentRow.Cells[0].Value.ToString();
+                dateTimePicker_empl.Value = (DateTime)DataGridView_employee.CurrentRow.Cells[4].Value;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void button_clear_Click(object sender, EventArgs e)

@@ -24,13 +24,14 @@ namespace Course_Work
         {
             showTable();
             DataGridViewColumn column0 = DataGridView_employee.Columns[0];
-            column0.Width = 35;
-            DataGridViewColumn column3 = DataGridView_employee.Columns[4];
-            column3.Width = 180;
+            column0.Width = 70;
+            DataGridViewColumn column11 = DataGridView_employee.Columns[4];
+            column11.Width = 160;
             DataGridViewColumn column4 = DataGridView_employee.Columns[5];
-            column4.Width = 80;
-            DataGridViewColumn column6 = DataGridView_employee.Columns[7];
-            column6.Width = 145;
+            column4.Width = 62;
+            DataGridViewColumn column00 = DataGridView_employee.Columns[7];
+            column00.Width = 130;
+
         }
 
         private void showTable()
@@ -107,10 +108,18 @@ namespace Course_Work
 
         private void DataGridView_employee_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            textBox_vacID.Text = DataGridView_employee.CurrentRow.Cells[0].Value.ToString();
-            textBox_dur.Text = DataGridView_employee.CurrentRow.Cells[7].Value.ToString();
-            dateTimePicker2.Value = (DateTime)DataGridView_employee.CurrentRow.Cells[5].Value;
-            comboBox2.Text = DataGridView_employee.CurrentRow.Cells[6].Value.ToString();
+            try
+            {
+                textBox_vacID.Text = DataGridView_employee.CurrentRow.Cells[0].Value.ToString();
+                textBox_dur.Text = DataGridView_employee.CurrentRow.Cells[8].Value.ToString();
+                dateTimePicker2.Value = (DateTime)DataGridView_employee.CurrentRow.Cells[6].Value;
+                comboBox2.Text = DataGridView_employee.CurrentRow.Cells[7].Value.ToString();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("В этой таблице нельзя выбрать данные.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
     }
 }
