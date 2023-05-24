@@ -36,7 +36,10 @@ namespace Course_Work
         private void MainForm_Load(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Normal;
-            emplCount();
+            //emplCount();
+            label_female.Visible = false;
+            label_male.Visible = false;
+            label_total.Visible = false;
         }
 
         void Loading()
@@ -295,12 +298,12 @@ namespace Course_Work
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Made by Nikita Lyapin FROM IS-31");
+            MessageBox.Show("Made by Nikita Lyapin FROM IS-31 2023\n Выполнил Ляпин Никита гр. ИС-31 2023", "Автор");
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Made by Nikita Lyapin FROM IS-31");
+            MessageBox.Show("Made by Nikita Lyapin FROM IS-31\n Выполнил Ляпин Никита гр. ИС-31 2023", "Автор");
         }
 
         private void button4_Click(object sender, EventArgs e)

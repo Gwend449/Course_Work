@@ -78,6 +78,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel_slide.SuspendLayout();
             this.panel_viewSubMenu.SuspendLayout();
             this.panel_VacSubMenu.SuspendLayout();
@@ -695,8 +696,8 @@
             // 
             // panel_cover
             // 
-            this.panel_cover.Controls.Add(this.label1);
             this.panel_cover.Controls.Add(this.pictureBox3);
+            this.panel_cover.Controls.Add(this.label3);
             this.panel_cover.Controls.Add(this.panel3);
             this.panel_cover.Controls.Add(this.panel2);
             this.panel_cover.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -710,11 +711,11 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(18, 27);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(18, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(624, 19);
+            this.label1.Size = new System.Drawing.Size(771, 22);
             this.label1.TabIndex = 9;
             this.label1.Text = "NIZHNY NOVGOROD STATE UNIVERSITY OF ARCHITECTURE AND CIVIL ENGINEERING";
             // 
@@ -733,6 +734,7 @@
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
+            this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.label_female);
             this.panel3.Controls.Add(this.label_male);
             this.panel3.Controls.Add(this.label_total);
@@ -801,9 +803,20 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(19, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(159, 21);
+            this.label2.Size = new System.Drawing.Size(199, 21);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Nikita\'s Lyapin Work";
+            this.label2.Text = "Nikita\'s Lyapin Work 2023";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
+            this.label3.Location = new System.Drawing.Point(18, 29);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(804, 23);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Отдел Кадров Нижегородского Государственного Архитектурного Университета";
             // 
             // MainForm
             // 
@@ -892,6 +905,7 @@
         private System.Windows.Forms.Button button_viewVacation;
         private System.Windows.Forms.Button button_viewJOBACT;
         private System.Windows.Forms.Button button_viewDegree;
+        private System.Windows.Forms.Label label3;
     }
 }
 

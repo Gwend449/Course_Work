@@ -107,10 +107,18 @@ namespace Course_Work
 
         private void DataGridView_employee_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            textBox_empl_ID.Text = DataGridView_employee.CurrentRow.Cells[0].Value.ToString(); 
-            textBox_college.Text = DataGridView_employee.CurrentRow.Cells[3].Value.ToString();
-            textBox_Course.Text = DataGridView_employee.CurrentRow.Cells[4].Value.ToString();
-            dateTimePicker1.Value = (DateTime)DataGridView_employee.CurrentRow.Cells[5].Value;
+            try
+            {
+                textBox_empl_ID.Text = DataGridView_employee.CurrentRow.Cells[0].Value.ToString();
+                textBox_college.Text = DataGridView_employee.CurrentRow.Cells[4].Value.ToString();
+                textBox_Course.Text = DataGridView_employee.CurrentRow.Cells[5].Value.ToString();
+                dateTimePicker1.Value = (DateTime)DataGridView_employee.CurrentRow.Cells[6].Value;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("В этой таблице нельзя выбрать данные.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                button_clear.PerformClick();
+            }
         }
 
         private void button_empl_Click(object sender, EventArgs e)
