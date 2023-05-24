@@ -21,6 +21,13 @@ namespace Course_Work
             InitializeComponent();
         }
 
+        private void emplCount()
+        {
+            label_female.Text = "Женщин : " + employee.totalFemale();
+            label_male.Text = "Мужчин : " + employee.totalMale();
+            label_total.Text = "Всего сотрудников : " + employee.totalEmployees();
+        }
+
         private void ViewEmployeeForm_Load(object sender, EventArgs e)
         {
             showData(new SqlCommand("SELECT * FROM [Сотрудник]"));
@@ -31,7 +38,7 @@ namespace Course_Work
             comboBox_adr.DataSource = employee.getEmployeeList(new SqlCommand("SELECT DISTINCT [Адрес] FROM Сотрудник"));
             comboBox_adr.DisplayMember = "Адрес";
             comboBox_adr.ValueMember = "Адрес";
-            
+            emplCount();
         }
 
         public void showData(SqlCommand command)
