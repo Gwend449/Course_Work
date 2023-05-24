@@ -24,19 +24,23 @@ namespace Course_Work
         {
             showEmployee();
             DataGridViewColumn column0 = DataGridView_employee.Columns[0];
-            column0.Width = 100;
+            column0.Width = 70;
             DataGridViewColumn column4 = DataGridView_employee.Columns[4];
             column4.Width = 160;
         }
 
         private void showTable()
         {
-            DataGridView_employee.DataSource = vacation.getList(new SqlCommand("select Отпуск.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество, Должность.Сфера_деятельности as [Сфера деятельности], Должность.Стаж, Отпуск.Дата as [Начало отпуска], Отпуск.Тип, Отпуск.Длительность as [Длительность (в днях)] from Отпуск INNER JOIN Должность_сотрудника as ds ON ds.Id = Отпуск.Должность_сотрудника INNER JOIN Должность ON ds.Должность = Должность.Id INNER JOIN Сотрудник ON ds.Сотрудник = Сотрудник.Id"));
+            DataGridView_employee.DataSource = vacation.getList(new SqlCommand("select Отпуск.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество, Должность.Сфера_деятельности as [Должность], Должность.Стаж, Отпуск.Дата as [Начало отпуска], Отпуск.Тип, Отпуск.Длительность as [Кол-во дней] from Отпуск INNER JOIN Должность_сотрудника as ds ON ds.Id = Отпуск.Должность_сотрудника INNER JOIN Должность ON ds.Должность = Должность.Id INNER JOIN Сотрудник ON ds.Сотрудник = Сотрудник.Id"));
+            DataGridViewColumn column4 = DataGridView_employee.Columns[5];
+            column4.Width = 62;
+            DataGridViewColumn column0 = DataGridView_employee.Columns[7];
+            column0.Width = 130;
         }
 
         private void showEmployee()
         {
-            DataGridView_employee.DataSource = vacation.getList(new SqlCommand("select [Должность_сотрудника].Id as [ID Должности], Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество, Должность.Сфера_деятельности as [Сфера деятельности], Должность.Стаж FROM [Должность_сотрудника] INNER JOIN Сотрудник ON Сотрудник.Id = Должность_сотрудника.Сотрудник INNER JOIN Должность ON Должность_сотрудника.Должность = Должность.Id"));
+            DataGridView_employee.DataSource = vacation.getList(new SqlCommand("select [Должность_сотрудника].Id as [ID Должн.], Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество, Должность.Сфера_деятельности as [Должность], Должность.Звание, Должность.Стаж FROM [Должность_сотрудника] INNER JOIN Сотрудник ON Сотрудник.Id = Должность_сотрудника.Сотрудник INNER JOIN Должность ON Должность_сотрудника.Должность = Должность.Id"));
         }
 
         private void button_edct_Click_1(object sender, EventArgs e)

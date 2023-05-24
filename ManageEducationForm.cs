@@ -35,7 +35,7 @@ namespace Course_Work
         }
         private void showEducation()
         {
-            DataGridView_employee.DataSource = education.getList(new SqlCommand("SELECT [Образование].Id, [Сотрудник].[Имя], [Сотрудник].[Отчество], [Образование].[Учебное_заведение] as [Учебное Заведение], [Образование].[Направление], [Образование].[Год_окончания] as [Год окончания] FROM [Сотрудник] INNER JOIN [Образование] ON [Образование].[Сотрудник] = [Сотрудник].Id"));
+            DataGridView_employee.DataSource = education.getList(new SqlCommand("SELECT [Образование].Id, [Сотрудник].[Имя], [Сотрудник].[Фамилия], [Сотрудник].[Отчество], [Образование].[Учебное_заведение] as [Учебное Заведение], [Образование].[Направление], [Образование].[Год_окончания] as [Год окончания] FROM [Сотрудник] INNER JOIN [Образование] ON [Образование].[Сотрудник] = [Сотрудник].Id"));
         }
 
         private void button_update_Click(object sender, EventArgs e)
@@ -121,7 +121,7 @@ namespace Course_Work
 
         private void button_search_Click(object sender, EventArgs e)
         {
-            DataGridView_employee.DataSource = education.getList(new SqlCommand("SELECT Образование.Id, Сотрудник.Имя, Сотрудник.Отчество, Образование.[Учебное_заведение], Образование.Направление, Образование.[Год_окончания] FROM Сотрудник INNER JOIN[Образование] ON[Образование].[Сотрудник] = [Сотрудник].Id WHERE CONCAT(Сотрудник.Имя, Сотрудник.Отчество, Образование.[Учебное_заведение], Образование.Направление) LIKE '%"+textBox_search.Text+"%'"));
+            DataGridView_employee.DataSource = education.getList(new SqlCommand("SELECT Образование.Id, Сотрудник.Имя, Сотрудник.Отчество, Образование.[Учебное_заведение], Образование.Направление, Образование.[Год_окончания] FROM Сотрудник INNER JOIN[Образование] ON[Образование].[Сотрудник] = [Сотрудник].Id WHERE CONCAT(Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество, Образование.[Учебное_заведение], Образование.Направление) LIKE '%"+textBox_search.Text+"%'"));
         }
 
         private void button_edct_Click(object sender, EventArgs e)

@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Course_Work
 {
@@ -171,6 +172,32 @@ namespace Course_Work
             DataTable table = new DataTable();
             adapter.Fill(table);
             return table;
+        }
+
+        public bool checkTitle(ComboBox cb)
+        {
+            if (cb.SelectedIndex == -1)
+            {
+                string title = "Отсутствует";
+                SqlCommand command = new SqlCommand($"UPDATE Должность SET Звание = @deg WHERE Id = {job_id}", dataBase.getConnection);
+                command.Parameters.Add("@deg", SqlDbType.NVarChar).Value = title;
+                dataBase.openConnection();
+
+                if (command.ExecuteNonQuery() == 1)
+                {
+                    dataBase.closeConnection();
+                }
+                else
+                {
+                    dataBase.closeConnection();
+                }
+
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

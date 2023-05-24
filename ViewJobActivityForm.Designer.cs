@@ -44,6 +44,8 @@
             this.DataGridView_employee = new Guna.UI2.WinForms.Guna2DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox_exp = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox_search = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView_employee)).BeginInit();
             this.SuspendLayout();
@@ -249,11 +251,34 @@
             this.textBox_exp.TabIndex = 76;
             this.textBox_exp.TextChanged += new System.EventHandler(this.textBox_exp_TextChanged);
             // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
+            this.label9.Location = new System.Drawing.Point(367, 508);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(145, 19);
+            this.label9.TabIndex = 78;
+            this.label9.Text = "(Поиск по Ф.И.О)";
+            // 
+            // textBox_search
+            // 
+            this.textBox_search.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.textBox_search.Location = new System.Drawing.Point(518, 504);
+            this.textBox_search.Name = "textBox_search";
+            this.textBox_search.Size = new System.Drawing.Size(176, 27);
+            this.textBox_search.TabIndex = 77;
+            this.textBox_search.TextChanged += new System.EventHandler(this.textBox_search_TextChanged);
+            // 
             // ViewJobActivityForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 611);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.textBox_search);
             this.Controls.Add(this.textBox_exp);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBox_title);
@@ -294,5 +319,7 @@
         private Guna.UI2.WinForms.Guna2DataGridView DataGridView_employee;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox_exp;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox_search;
     }
 }

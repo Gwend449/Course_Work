@@ -40,7 +40,6 @@
             this.button_add = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox_job = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.DataGridView_employee = new Guna.UI2.WinForms.Guna2DataGridView();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,6 +48,7 @@
             this.textBox_exp = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.datePicker = new System.Windows.Forms.DateTimePicker();
+            this.comboBox_job = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView_employee)).BeginInit();
@@ -173,17 +173,9 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
             this.label4.Location = new System.Drawing.Point(20, 457);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(192, 19);
+            this.label4.Size = new System.Drawing.Size(106, 19);
             this.label4.TabIndex = 43;
-            this.label4.Text = "Сфера деятельности :";
-            // 
-            // textBox_job
-            // 
-            this.textBox_job.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.textBox_job.Location = new System.Drawing.Point(218, 456);
-            this.textBox_job.Name = "textBox_job";
-            this.textBox_job.Size = new System.Drawing.Size(456, 27);
-            this.textBox_job.TabIndex = 42;
+            this.label4.Text = "Должность :";
             // 
             // label2
             // 
@@ -191,7 +183,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(426, 504);
+            this.label2.Location = new System.Drawing.Point(385, 504);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 19);
             this.label2.TabIndex = 41;
@@ -223,13 +215,13 @@
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DataGridView_employee.DefaultCellStyle = dataGridViewCellStyle3;
             this.DataGridView_employee.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DataGridView_employee.Location = new System.Drawing.Point(12, 74);
             this.DataGridView_employee.Name = "DataGridView_employee";
             this.DataGridView_employee.RowHeadersVisible = false;
-            this.DataGridView_employee.RowTemplate.Height = 60;
+            this.DataGridView_employee.RowTemplate.Height = 70;
             this.DataGridView_employee.RowTemplate.ReadOnly = true;
             this.DataGridView_employee.Size = new System.Drawing.Size(910, 298);
             this.DataGridView_employee.TabIndex = 40;
@@ -251,7 +243,7 @@
             this.DataGridView_employee.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DataGridView_employee.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.DataGridView_employee.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.DataGridView_employee.ThemeStyle.RowsStyle.Height = 60;
+            this.DataGridView_employee.ThemeStyle.RowsStyle.Height = 70;
             this.DataGridView_employee.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DataGridView_employee.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.DataGridView_employee.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView_employee_CellContentClick);
@@ -279,7 +271,7 @@
             // textBox_salary
             // 
             this.textBox_salary.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.textBox_salary.Location = new System.Drawing.Point(509, 500);
+            this.textBox_salary.Location = new System.Drawing.Point(468, 500);
             this.textBox_salary.Name = "textBox_salary";
             this.textBox_salary.Size = new System.Drawing.Size(165, 27);
             this.textBox_salary.TabIndex = 53;
@@ -316,11 +308,11 @@
             this.datePicker.Size = new System.Drawing.Size(41, 27);
             this.datePicker.TabIndex = 39;
             // 
-            // comboBox1
+            // comboBox_job
             // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBox_job.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.comboBox_job.FormattingEnabled = true;
+            this.comboBox_job.Items.AddRange(new object[] {
             "Лаборант",
             "Старший Лаборант",
             "Ассистент",
@@ -332,10 +324,22 @@
             "Декан",
             "Проректор",
             "Ректор"});
-            this.comboBox1.Location = new System.Drawing.Point(105, 500);
+            this.comboBox_job.Location = new System.Drawing.Point(141, 453);
+            this.comboBox_job.Name = "comboBox_job";
+            this.comboBox_job.Size = new System.Drawing.Size(379, 29);
+            this.comboBox_job.TabIndex = 57;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Доцент",
+            "Профессор"});
+            this.comboBox1.Location = new System.Drawing.Point(115, 500);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(236, 29);
-            this.comboBox1.TabIndex = 57;
+            this.comboBox1.Size = new System.Drawing.Size(204, 29);
+            this.comboBox1.TabIndex = 58;
             // 
             // JobActivityForm
             // 
@@ -343,6 +347,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 611);
             this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBox_job);
             this.Controls.Add(this.datePicker);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox_exp);
@@ -353,7 +358,6 @@
             this.Controls.Add(this.button_add);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox_job);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.DataGridView_employee);
             this.Controls.Add(this.label1);
@@ -382,7 +386,6 @@
         private System.Windows.Forms.Button button_add;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox_job;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2DataGridView DataGridView_employee;
         private System.Windows.Forms.Label label1;
@@ -391,6 +394,7 @@
         private System.Windows.Forms.TextBox textBox_exp;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker datePicker;
+        private System.Windows.Forms.ComboBox comboBox_job;
         private System.Windows.Forms.ComboBox comboBox1;
     }
 }

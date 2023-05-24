@@ -29,15 +29,17 @@ namespace Course_Work
 
         private void ViewJobActivityForm_Load(object sender, EventArgs e)
         {
-            showData(new SqlCommand("SELECT Должность.Id as [№ Должн.], Должность.[Сфера_деятельности] as [Сфера Деятельности], Должность.Звание, Должность.Оклад, Должность.Стаж, Сотрудник.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество FROM Должность INNER JOIN [Должность_сотрудника] as DS ON DS.Должность = Должность.Id INNER JOIN Сотрудник ON DS.Сотрудник = Сотрудник.Id"));
+            showData(new SqlCommand("SELECT Должность.Id as [№ Должн.], Должность.[Сфера_деятельности] as [Должность], Должность.Звание, Должность.Оклад, Должность.Стаж, Сотрудник.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество FROM Должность INNER JOIN [Должность_сотрудника] as DS ON DS.Должность = Должность.Id INNER JOIN Сотрудник ON DS.Сотрудник = Сотрудник.Id"));
             DataGridViewColumn column0 = DataGridView_employee.Columns[0];
             column0.Width = 70;
+            DataGridViewColumn column4 = DataGridView_employee.Columns[4];
+            column4.Width = 70;
             DataGridViewColumn column5 = DataGridView_employee.Columns[5];
             column5.Width = 35;
 
-            comboBox_job.DataSource = jobActivity.getList(new SqlCommand("SELECT DISTINCT [Сфера_деятельности] as [Сфера деятельности] FROM Должность"));
-            comboBox_job.DisplayMember = "Сфера деятельности";
-            comboBox_job.ValueMember = "Сфера деятельности";
+            comboBox_job.DataSource = jobActivity.getList(new SqlCommand("SELECT DISTINCT [Сфера_деятельности] as [Должность] FROM Должность"));
+            comboBox_job.DisplayMember = "Должность";
+            comboBox_job.ValueMember = "Должность";
 
             comboBox_title.DataSource = jobActivity.getList(new SqlCommand("SELECT DISTINCT Звание FROM Должность"));
             comboBox_title.DisplayMember = "Звание";
@@ -53,11 +55,11 @@ namespace Course_Work
 
             if(title == "" && job == "")
             {
-                DataGridView_employee.DataSource = jobActivity.getList(new SqlCommand("SELECT Должность.Id as [№ Должн.], Должность.[Сфера_деятельности] as [Сфера Деятельности], Должность.Звание, Должность.Оклад, Должность.Стаж, Сотрудник.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество FROM Должность INNER JOIN [Должность_сотрудника] as DS ON DS.Должность = Должность.Id INNER JOIN Сотрудник ON DS.Сотрудник = Сотрудник.Id"));
+                DataGridView_employee.DataSource = jobActivity.getList(new SqlCommand("SELECT Должность.Id as [№ Должн.], Должность.[Сфера_деятельности] as [Должность], Должность.Звание, Должность.Оклад, Должность.Стаж, Сотрудник.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество FROM Должность INNER JOIN [Должность_сотрудника] as DS ON DS.Должность = Должность.Id INNER JOIN Сотрудник ON DS.Сотрудник = Сотрудник.Id"));
             }
             else if(job!="" && title == "")
             {
-                (DataGridView_employee.DataSource as DataTable).DefaultView.RowFilter = $"[Сфера Деятельности] LIKE '{job}'";
+                (DataGridView_employee.DataSource as DataTable).DefaultView.RowFilter = $"[Должность] LIKE '{job}'";
             }
             else if(title!="" && job == "")
             {
@@ -65,7 +67,7 @@ namespace Course_Work
             }
             else if(title!="" && job!="")
             {
-                (DataGridView_employee.DataSource as DataTable).DefaultView.RowFilter = $"[Сфера Деятельности] LIKE '{job}' AND [Звание] LIKE '{title}'";
+                (DataGridView_employee.DataSource as DataTable).DefaultView.RowFilter = $"[Должность] LIKE '{job}' AND [Звание] LIKE '{title}'";
             }
         }
 
@@ -73,7 +75,7 @@ namespace Course_Work
         {
             if (textBox_exp.Text.Length == 0)
             {
-                DataGridView_employee.DataSource = jobActivity.getList(new SqlCommand("SELECT Должность.Id as [№ Должн.], Должность.[Сфера_деятельности] as [Сфера Деятельности], Должность.Звание, Должность.Оклад, Должность.Стаж, Сотрудник.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество FROM Должность INNER JOIN [Должность_сотрудника] as DS ON DS.Должность = Должность.Id INNER JOIN Сотрудник ON DS.Сотрудник = Сотрудник.Id"));
+                DataGridView_employee.DataSource = jobActivity.getList(new SqlCommand("SELECT Должность.Id as [№ Должн.], Должность.[Сфера_деятельности] as [Должность], Должность.Звание, Должность.Оклад, Должность.Стаж, Сотрудник.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество FROM Должность INNER JOIN [Должность_сотрудника] as DS ON DS.Должность = Должность.Id INNER JOIN Сотрудник ON DS.Сотрудник = Сотрудник.Id"));
             }
             else
             {
@@ -101,6 +103,18 @@ namespace Course_Work
             helper.FooterSpacing = 15;
             helper.printDocument.DefaultPageSettings.Landscape = true;
             helper.PrintDataGridView(DataGridView_employee);
+        }
+
+        private void textBox_search_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox_search.Text.Length == 0)
+            {
+                DataGridView_employee.DataSource = jobActivity.getList(new SqlCommand("SELECT Должность.Id as [№ Должн.], Должность.[Сфера_деятельности] as [Должность], Должность.Звание, Должность.Оклад, Должность.Стаж, Сотрудник.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество FROM Должность INNER JOIN [Должность_сотрудника] as DS ON DS.Должность = Должность.Id INNER JOIN Сотрудник ON DS.Сотрудник = Сотрудник.Id"));
+            }
+            else
+            {
+                (DataGridView_employee.DataSource as DataTable).DefaultView.RowFilter = $"Имя LIKE '%{textBox_search.Text}%' OR Фамилия LIKE '%{textBox_search.Text}%' OR Отчество LIKE '%{textBox_search.Text}%'";
+            }
         }
     }
 }

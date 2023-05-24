@@ -30,15 +30,15 @@ namespace Course_Work
 
         private void ViewDegreeForm_Load(object sender, EventArgs e)
         {
-            showData(new SqlCommand("select Сотрудник.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество, Должность.Сфера_деятельности as [Сфера деятельности],Степень.Id as [Id (степень)], Степень.Степень, Должность.Звание FROM Сотрудник INNER JOIN Должность_сотрудника as DS ON DS.Сотрудник = Сотрудник.Id INNER JOIN Должность ON DS.Должность = Должность.Id INNER JOIN Степень_сотрудника as SS ON SS.Сотрудник = Сотрудник.Id INNER JOIN Степень ON Степень.Id = SS.Степень"));
+            showData(new SqlCommand("select Сотрудник.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество, Должность.Сфера_деятельности as [Должность],Степень.Id as [Id (степень)], Степень.Степень, Должность.Звание FROM Сотрудник INNER JOIN Должность_сотрудника as DS ON DS.Сотрудник = Сотрудник.Id INNER JOIN Должность ON DS.Должность = Должность.Id INNER JOIN Степень_сотрудника as SS ON SS.Сотрудник = Сотрудник.Id INNER JOIN Степень ON Степень.Id = SS.Степень"));
             DataGridViewColumn column0 = DataGridView_employee.Columns[0];
             column0.Width = 35;
             DataGridViewColumn column5 = DataGridView_employee.Columns[5];
-            column5.Width = 70;
+            column5.Width = 75;
 
-            comboBox_job.DataSource = jobActivity.getList(new SqlCommand("SELECT DISTINCT [Сфера_деятельности] as [Сфера деятельности] FROM Должность"));
-            comboBox_job.DisplayMember = "Сфера деятельности";
-            comboBox_job.ValueMember = "Сфера деятельности";
+            comboBox_job.DataSource = jobActivity.getList(new SqlCommand("SELECT DISTINCT [Сфера_деятельности] as [Должность] FROM Должность"));
+            comboBox_job.DisplayMember = "Должность";
+            comboBox_job.ValueMember = "Должность";
 
             comboBox_title.DataSource = jobActivity.getList(new SqlCommand("SELECT DISTINCT Звание FROM Должность"));
             comboBox_title.DisplayMember = "Звание";
@@ -106,6 +106,18 @@ namespace Course_Work
             helper.FooterSpacing = 15;
             helper.printDocument.DefaultPageSettings.Landscape = true;
             helper.PrintDataGridView(DataGridView_employee);
+        }
+
+        private void textBox_search_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox_search.Text.Length == 0)
+            {
+                DataGridView_employee.DataSource = jobActivity.getList(new SqlCommand("SELECT Должность.Id as [№ Должн.], Должность.[Сфера_деятельности] as [Должность], Должность.Звание, Должность.Оклад, Должность.Стаж, Сотрудник.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество FROM Должность INNER JOIN [Должность_сотрудника] as DS ON DS.Должность = Должность.Id INNER JOIN Сотрудник ON DS.Сотрудник = Сотрудник.Id"));
+            }
+            else
+            {
+                (DataGridView_employee.DataSource as DataTable).DefaultView.RowFilter = $"Имя LIKE '%{textBox_search.Text}%' OR Фамилия LIKE '%{textBox_search.Text}%' OR Отчество LIKE '%{textBox_search.Text}%'";
+            }
         }
     }
 }

@@ -49,7 +49,7 @@ namespace Course_Work
 
         private void showJob()
         {
-            DataGridView_employee.DataSource = jobActivity.getList(new SqlCommand("SELECT Сотрудник.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество, Должность.[Сфера_деятельности] as [Сфера Деятельности], Должность.Стаж FROM Должность INNER JOIN [Должность_сотрудника] ON [Должность_сотрудника].[Должность] = [Должность].Id INNER JOIN Сотрудник ON [Должность_сотрудника].Сотрудник = Сотрудник.Id"));
+            DataGridView_employee.DataSource = jobActivity.getList(new SqlCommand("SELECT Сотрудник.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество, Должность.[Сфера_деятельности] as [Должность],Должность.Звание, Должность.Стаж FROM Должность INNER JOIN [Должность_сотрудника] ON [Должность_сотрудника].[Должность] = [Должность].Id INNER JOIN Сотрудник ON [Должность_сотрудника].Сотрудник = Сотрудник.Id"));
         }
 
         private void button_edct_Click(object sender, EventArgs e)

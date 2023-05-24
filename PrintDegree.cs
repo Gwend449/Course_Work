@@ -40,6 +40,8 @@ namespace Course_Work
             showEmpDeg();
             DataGridViewColumn column0 = DataGridView_employee.Columns[0];
             column0.Width = 35;
+            DataGridViewColumn column5 = DataGridView_employee.Columns[4];
+            column5.Width = 152;
         }
 
         private void printData()

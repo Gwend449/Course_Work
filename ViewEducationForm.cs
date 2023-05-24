@@ -83,5 +83,18 @@ namespace Course_Work
             helper.printDocument.DefaultPageSettings.Landscape = true;
             helper.PrintDataGridView(DataGridView_employee);
         }
+
+        private void textBox_search_TextChanged(object sender, EventArgs e)
+        {
+            JobActivityClass jobActivity = new JobActivityClass();
+            if (textBox_search.Text.Length == 0)
+            {
+                DataGridView_employee.DataSource = jobActivity.getList(new SqlCommand("SELECT Должность.Id as [№ Должн.], Должность.[Сфера_деятельности] as [Должность], Должность.Звание, Должность.Оклад, Должность.Стаж, Сотрудник.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество FROM Должность INNER JOIN [Должность_сотрудника] as DS ON DS.Должность = Должность.Id INNER JOIN Сотрудник ON DS.Сотрудник = Сотрудник.Id"));
+            }
+            else
+            {
+                (DataGridView_employee.DataSource as DataTable).DefaultView.RowFilter = $"Имя LIKE '%{textBox_search.Text}%' OR Фамилия LIKE '%{textBox_search.Text}%' OR Отчество LIKE '%{textBox_search.Text}%'";
+            }
+        }
     }
 }

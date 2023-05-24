@@ -23,7 +23,7 @@ namespace Course_Work
 
         private void showJob()
         {
-            DataGridView_employee.DataSource = jobClass.getList(new SqlCommand("SELECT Сотрудник.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество, Должность.[Сфера_деятельности] as [Сфера Деятельности], Должность.Стаж FROM Должность INNER JOIN [Должность_сотрудника] ON [Должность_сотрудника].[Должность] = [Должность].Id INNER JOIN Сотрудник ON [Должность_сотрудника].Сотрудник = Сотрудник.Id"));
+            DataGridView_employee.DataSource = jobClass.getList(new SqlCommand("SELECT Сотрудник.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество, Должность.[Сфера_деятельности] as [Должность], Должность.Звание, Должность.Стаж FROM Должность INNER JOIN [Должность_сотрудника] ON [Должность_сотрудника].[Должность] = [Должность].Id INNER JOIN Сотрудник ON [Должность_сотрудника].Сотрудник = Сотрудник.Id"));
         }
 
         private void showEmployee()
@@ -57,7 +57,7 @@ namespace Course_Work
 
         private void button_add_Click(object sender, EventArgs e)
         {
-            if (textBox_job.Text == "" || textBox_salary.Text == "" || 
+            if (comboBox_job.Text.Length == 0 || textBox_salary.Text == "" || 
                 textBox_exp.Text == "")
             {
                 MessageBox.Show("Заполните пустые Поля!", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -65,10 +65,10 @@ namespace Course_Work
             else
             {
                 int employee_id = Convert.ToInt32(textBox_empl_ID.Text);
-                string job = textBox_job.Text;
+                string job = comboBox_job.Text;
                 decimal money = Convert.ToDecimal(textBox_salary.Text);
                 int exp = Convert.ToInt32(textBox_exp.Text);
-                string degree = comboBox1.SelectedText;
+                string degree = comboBox_job.Text;
 
                 
                 if(!checkExper(employee_id))
@@ -79,6 +79,7 @@ namespace Course_Work
                 {
                     if (jobClass.insertJob(job, money, exp, degree))
                     {
+                        jobClass.checkTitle(comboBox1);
                         jobClass.insertJobToEmpl(employee_id);
                         showJob();
                         MessageBox.Show("Данные о должности добавлены!", "Добавить данные", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -106,7 +107,6 @@ namespace Course_Work
             showJob_Edct();
         }
 
-        
 
         private bool checkExper(int employee_id)
         {
@@ -150,7 +150,8 @@ namespace Course_Work
         {
             textBox_empl_ID.Clear();
             textBox_exp.Clear();
-            textBox_job.Clear();
+            comboBox_job.SelectedIndex = -1;
+            comboBox1.SelectedIndex = -1;
             textBox_salary.Clear();
         }
         //int click = 1;

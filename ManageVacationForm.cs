@@ -25,15 +25,17 @@ namespace Course_Work
             showTable();
             DataGridViewColumn column0 = DataGridView_employee.Columns[0];
             column0.Width = 35;
-            DataGridViewColumn column4 = DataGridView_employee.Columns[3];
-            column4.Width = 220;
-
-
+            DataGridViewColumn column3 = DataGridView_employee.Columns[4];
+            column3.Width = 180;
+            DataGridViewColumn column4 = DataGridView_employee.Columns[5];
+            column4.Width = 80;
+            DataGridViewColumn column6 = DataGridView_employee.Columns[7];
+            column6.Width = 145;
         }
 
         private void showTable()
         {
-            DataGridView_employee.DataSource = vacation.getList(new SqlCommand("select Отпуск.Id, Сотрудник.Имя, Сотрудник.Фамилия, Должность.Сфера_деятельности as [Сфера деятельности], Должность.Стаж, Отпуск.Дата as [Начало отпуска], Отпуск.Тип, Отпуск.Длительность as [Длительность (в днях)] from Отпуск INNER JOIN Должность_сотрудника as ds ON ds.Id = Отпуск.Должность_сотрудника INNER JOIN Должность ON ds.Должность = Должность.Id INNER JOIN Сотрудник ON ds.Сотрудник = Сотрудник.Id"));
+            DataGridView_employee.DataSource = vacation.getList(new SqlCommand("select Отпуск.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество, Должность.Сфера_деятельности as [Должность], Должность.Стаж, Отпуск.Дата as [Начало отпуска], Отпуск.Тип, Отпуск.Длительность as [Кол-во дней] from Отпуск INNER JOIN Должность_сотрудника as ds ON ds.Id = Отпуск.Должность_сотрудника INNER JOIN Должность ON ds.Должность = Должность.Id INNER JOIN Сотрудник ON ds.Сотрудник = Сотрудник.Id"));
         }
 
         private void button_clear_Click(object sender, EventArgs e)

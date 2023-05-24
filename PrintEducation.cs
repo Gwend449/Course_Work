@@ -18,7 +18,7 @@ namespace Course_Work
 
         private void PrintEducation_Load(object sender, EventArgs e)
         {
-            showData(new SqlCommand("SELECT Образование.Id, Сотрудник.Имя, Сотрудник.Отчество, Сотрудник.Пол, Образование.[Учебное_заведение] as [Учебное заведение], Образование.Направление, Образование.[Год_окончания] as [Год окончания] FROM Сотрудник INNER JOIN[Образование] ON[Образование].[Сотрудник] = [Сотрудник].Id"));
+            showData(new SqlCommand("SELECT Образование.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество, Сотрудник.Пол, Образование.[Учебное_заведение] as [Учебное заведение], Образование.Направление, Образование.[Год_окончания] as [Год окончания] FROM Сотрудник INNER JOIN[Образование] ON[Образование].[Сотрудник] = [Сотрудник].Id"));
             DataGridViewColumn column0 = DataGridView_employee.Columns[0];
             column0.Width = 35;
             DataGridViewColumn column5 = DataGridView_employee.Columns[5];

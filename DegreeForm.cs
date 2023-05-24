@@ -24,7 +24,7 @@ namespace Course_Work
 
         public void showTable()
         {
-            DataGridView_employee.DataSource = degreeClass.getList(new SqlCommand("SELECT Сотрудник.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество, Должность.Сфера_деятельности as [Сфера Деятельности], Должность.Звание FROM Сотрудник INNER JOIN Должность_сотрудника as DS ON DS.Сотрудник = Сотрудник.Id INNER JOIN Должность ON DS.Должность = Должность.Id WHERE DATALENGTH(Должность.Звание) > 0", dataBase.getConnection));
+            DataGridView_employee.DataSource = degreeClass.getList(new SqlCommand("SELECT Сотрудник.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество, Должность.Сфера_деятельности as [Должность], Должность.Звание, Должность.Стаж FROM Сотрудник INNER JOIN Должность_сотрудника as DS ON DS.Сотрудник = Сотрудник.Id INNER JOIN Должность ON DS.Должность = Должность.Id WHERE DATALENGTH(Должность.Звание) > 0", dataBase.getConnection));
         }
 
         private void button_empl_Click(object sender, EventArgs e)
@@ -35,13 +35,15 @@ namespace Course_Work
 
         private void showEmpDeg()
         {
-            DataGridView_employee.DataSource = degreeClass.getList(new SqlCommand("select Сотрудник.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество, Должность.Сфера_деятельности as [Сфера Деятельности], Степень.Степень, Должность.Звание FROM Сотрудник INNER JOIN Должность_сотрудника as DS ON DS.Сотрудник = Сотрудник.Id INNER JOIN Должность ON DS.Должность = Должность.Id INNER JOIN Степень_сотрудника as SS ON SS.Сотрудник = Сотрудник.Id INNER JOIN Степень ON Степень.Id = SS.Степень"));
+            DataGridView_employee.DataSource = degreeClass.getList(new SqlCommand("select Сотрудник.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество, Должность.Сфера_деятельности as [Должность], Степень.Степень, Должность.Звание FROM Сотрудник INNER JOIN Должность_сотрудника as DS ON DS.Сотрудник = Сотрудник.Id INNER JOIN Должность ON DS.Должность = Должность.Id INNER JOIN Степень_сотрудника as SS ON SS.Сотрудник = Сотрудник.Id INNER JOIN Степень ON Степень.Id = SS.Степень"));
         }
 
         private void button_edct_Click(object sender, EventArgs e)
         {
             showEmpDeg();
             DataGridView_employee.ReadOnly = true;
+            DataGridViewColumn column0 = DataGridView_employee.Columns[6];
+            column0.Width = 100;
         }
 
         private void label7_Click(object sender, EventArgs e)

@@ -50,7 +50,13 @@ namespace Course_Work
 
         private void PrintJobActivity_Load(object sender, EventArgs e)
         {
-            showData(new SqlCommand("SELECT Должность.Id as [№ Должн.], Должность.[Сфера_деятельности], Должность.Звание, Должность.Оклад, Должность.Стаж, Сотрудник.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество FROM Должность INNER JOIN [Должность_сотрудника] as DS ON DS.Должность = Должность.Id INNER JOIN Сотрудник ON DS.Сотрудник = Сотрудник.Id"));
+            showData(new SqlCommand("SELECT Должность.Id as [№ Должн.], Должность.[Сфера_деятельности] as [Должность], Должность.Звание, Должность.Оклад, Должность.Стаж, Сотрудник.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество FROM Должность INNER JOIN [Должность_сотрудника] as DS ON DS.Должность = Должность.Id INNER JOIN Сотрудник ON DS.Сотрудник = Сотрудник.Id"));
+            DataGridViewColumn column0 = DataGridView_employee.Columns[0];
+            column0.Width = 66;
+            DataGridViewColumn column4 = DataGridView_employee.Columns[4];
+            column4.Width = 53;
+            DataGridViewColumn column5 = DataGridView_employee.Columns[5];
+            column5.Width = 50;
         }
 
         private void button_search_Click(object sender, EventArgs e)

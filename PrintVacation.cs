@@ -24,7 +24,7 @@ namespace Course_Work
 
         private void showVacation()
         {
-            DataGridView_employee.DataSource = vacation.getList(new SqlCommand("select Отпуск.Id, Сотрудник.Имя, Сотрудник.Фамилия, Должность.Сфера_деятельности as [Сфера деятельности], Должность.Стаж, Отпуск.Дата as [Начало отпуска], Отпуск.Тип, Отпуск.Длительность as [Длительность (в днях)] from Отпуск INNER JOIN Должность_сотрудника as ds ON ds.Id = Отпуск.Должность_сотрудника INNER JOIN Должность ON ds.Должность = Должность.Id INNER JOIN Сотрудник ON ds.Сотрудник = Сотрудник.Id"));
+            DataGridView_employee.DataSource = vacation.getList(new SqlCommand("select Отпуск.Id, Сотрудник.Имя, Сотрудник.Фамилия, Должность.Сфера_деятельности as [Должность], Должность.Стаж, Отпуск.Дата as [Начало отпуска], Отпуск.Тип, Отпуск.Длительность as [Кол-во дней] from Отпуск INNER JOIN Должность_сотрудника as ds ON ds.Id = Отпуск.Должность_сотрудника INNER JOIN Должность ON ds.Должность = Должность.Id INNER JOIN Сотрудник ON ds.Сотрудник = Сотрудник.Id"));
         }
 
         private void PrintVacation_Load(object sender, EventArgs e)
@@ -32,6 +32,12 @@ namespace Course_Work
             showVacation();
             DataGridViewColumn column0 = DataGridView_employee.Columns[0];
             column0.Width = 35;
+            DataGridViewColumn column4 = DataGridView_employee.Columns[3];
+            column4.Width = 180;
+            DataGridViewColumn column5 = DataGridView_employee.Columns[4];
+            column5.Width = 80;
+            DataGridViewColumn column6 = DataGridView_employee.Columns[6];
+            column6.Width = 145;
         }
 
         private void printData()
