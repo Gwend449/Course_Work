@@ -30,21 +30,6 @@ namespace Course_Work
 
         private void button_print_Click(object sender, EventArgs e)
         {
-            string selectQuery;
-
-            if (radioButton1.Checked)
-            {
-                selectQuery = "SELECT Должность.Id as [№ Должн.], Должность.[Сфера_деятельности], Должность.Звание, Должность.Оклад, Должность.Стаж, Сотрудник.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество FROM Должность INNER JOIN [Должность_сотрудника] as DS ON DS.Должность = Должность.Id INNER JOIN Сотрудник ON DS.Сотрудник = Сотрудник.Id";
-            }
-            else if (radioButton_FeMale.Checked)
-            {
-                selectQuery = "SELECT Должность.Id as [№ Должн.], Должность.[Сфера_деятельности], Должность.Звание, Должность.Оклад, Должность.Стаж, Сотрудник.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество FROM Должность INNER JOIN [Должность_сотрудника] as DS ON DS.Должность = Должность.Id INNER JOIN Сотрудник ON DS.Сотрудник = Сотрудник.Id WHERE Сотрудник.[Пол] = 'Женщина'";
-            }
-            else
-            {
-                selectQuery = "SELECT Должность.Id as [№ Должн.], Должность.[Сфера_деятельности], Должность.Звание, Должность.Оклад, Должность.Стаж, Сотрудник.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество FROM Должность INNER JOIN [Должность_сотрудника] as DS ON DS.Должность = Должность.Id INNER JOIN Сотрудник ON DS.Сотрудник = Сотрудник.Id Where Сотрудник.[Пол] = 'Мужчина'";
-            }
-            showData(new SqlCommand(selectQuery));
             printData();
         }
 
@@ -73,9 +58,23 @@ namespace Course_Work
             DataGridView_employee.DataSource = jobActivityClass.searchJob(textBox_search.Text);
         }
 
-        private void textBox_search_TextChanged(object sender, EventArgs e)
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
+            string selectQuery;
 
+            if (radioButton1.Checked)
+            {
+                selectQuery = "SELECT Должность.Id as [№ Должн.], Должность.[Сфера_деятельности], Должность.Звание, Должность.Оклад, Должность.Стаж, Сотрудник.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество FROM Должность INNER JOIN [Должность_сотрудника] as DS ON DS.Должность = Должность.Id INNER JOIN Сотрудник ON DS.Сотрудник = Сотрудник.Id";
+            }
+            else if (radioButton_FeMale.Checked)
+            {
+                selectQuery = "SELECT Должность.Id as [№ Должн.], Должность.[Сфера_деятельности], Должность.Звание, Должность.Оклад, Должность.Стаж, Сотрудник.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество FROM Должность INNER JOIN [Должность_сотрудника] as DS ON DS.Должность = Должность.Id INNER JOIN Сотрудник ON DS.Сотрудник = Сотрудник.Id WHERE Сотрудник.[Пол] = 'Женщина'";
+            }
+            else
+            {
+                selectQuery = "SELECT Должность.Id as [№ Должн.], Должность.[Сфера_деятельности], Должность.Звание, Должность.Оклад, Должность.Стаж, Сотрудник.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество FROM Должность INNER JOIN [Должность_сотрудника] as DS ON DS.Должность = Должность.Id INNER JOIN Сотрудник ON DS.Сотрудник = Сотрудник.Id Where Сотрудник.[Пол] = 'Мужчина'";
+            }
+            showData(new SqlCommand(selectQuery));
         }
     }
 }

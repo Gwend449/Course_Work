@@ -32,6 +32,7 @@
             this.panel_slide = new System.Windows.Forms.Panel();
             this.button_main = new System.Windows.Forms.Button();
             this.panel_viewSubMenu = new System.Windows.Forms.Panel();
+            this.button_viewDegree = new System.Windows.Forms.Button();
             this.button_viewJOBACT = new System.Windows.Forms.Button();
             this.button_viewEdct = new System.Windows.Forms.Button();
             this.button_viewEmp = new System.Windows.Forms.Button();
@@ -77,7 +78,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button_viewDegree = new System.Windows.Forms.Button();
             this.panel_slide.SuspendLayout();
             this.panel_viewSubMenu.SuspendLayout();
             this.panel_VacSubMenu.SuspendLayout();
@@ -117,7 +117,7 @@
             this.panel_slide.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_slide.Location = new System.Drawing.Point(0, 0);
             this.panel_slide.Name = "panel_slide";
-            this.panel_slide.Size = new System.Drawing.Size(203, 611);
+            this.panel_slide.Size = new System.Drawing.Size(203, 811);
             this.panel_slide.TabIndex = 0;
             // 
             // button_main
@@ -150,6 +150,22 @@
             this.panel_viewSubMenu.Name = "panel_viewSubMenu";
             this.panel_viewSubMenu.Size = new System.Drawing.Size(186, 252);
             this.panel_viewSubMenu.TabIndex = 12;
+            // 
+            // button_viewDegree
+            // 
+            this.button_viewDegree.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button_viewDegree.FlatAppearance.BorderSize = 0;
+            this.button_viewDegree.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_viewDegree.ForeColor = System.Drawing.Color.White;
+            this.button_viewDegree.Location = new System.Drawing.Point(0, 150);
+            this.button_viewDegree.Name = "button_viewDegree";
+            this.button_viewDegree.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.button_viewDegree.Size = new System.Drawing.Size(186, 50);
+            this.button_viewDegree.TabIndex = 6;
+            this.button_viewDegree.Text = "Степень";
+            this.button_viewDegree.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_viewDegree.UseVisualStyleBackColor = true;
+            this.button_viewDegree.Click += new System.EventHandler(this.button_viewDegree_Click);
             // 
             // button_viewJOBACT
             // 
@@ -674,7 +690,7 @@
             this.panel_main.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_main.Location = new System.Drawing.Point(203, 0);
             this.panel_main.Name = "panel_main";
-            this.panel_main.Size = new System.Drawing.Size(931, 611);
+            this.panel_main.Size = new System.Drawing.Size(931, 811);
             this.panel_main.TabIndex = 1;
             // 
             // panel_cover
@@ -686,7 +702,7 @@
             this.panel_cover.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_cover.Location = new System.Drawing.Point(0, 0);
             this.panel_cover.Name = "panel_cover";
-            this.panel_cover.Size = new System.Drawing.Size(931, 611);
+            this.panel_cover.Size = new System.Drawing.Size(931, 811);
             this.panel_cover.TabIndex = 0;
             // 
             // label1
@@ -706,9 +722,9 @@
             // 
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(0, 138);
+            this.pictureBox3.Location = new System.Drawing.Point(0, 170);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(931, 382);
+            this.pictureBox3.Size = new System.Drawing.Size(931, 511);
             this.pictureBox3.TabIndex = 8;
             this.pictureBox3.TabStop = false;
             // 
@@ -720,7 +736,7 @@
             this.panel3.Controls.Add(this.label_female);
             this.panel3.Controls.Add(this.label_male);
             this.panel3.Controls.Add(this.label_total);
-            this.panel3.Location = new System.Drawing.Point(0, 514);
+            this.panel3.Location = new System.Drawing.Point(0, 714);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(931, 97);
             this.panel3.TabIndex = 7;
@@ -789,27 +805,11 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Nikita\'s Lyapin Work";
             // 
-            // button_viewDegree
-            // 
-            this.button_viewDegree.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button_viewDegree.FlatAppearance.BorderSize = 0;
-            this.button_viewDegree.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_viewDegree.ForeColor = System.Drawing.Color.White;
-            this.button_viewDegree.Location = new System.Drawing.Point(0, 150);
-            this.button_viewDegree.Name = "button_viewDegree";
-            this.button_viewDegree.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.button_viewDegree.Size = new System.Drawing.Size(186, 50);
-            this.button_viewDegree.TabIndex = 6;
-            this.button_viewDegree.Text = "Степень";
-            this.button_viewDegree.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_viewDegree.UseVisualStyleBackColor = true;
-            this.button_viewDegree.Click += new System.EventHandler(this.button_viewDegree_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1134, 611);
+            this.ClientSize = new System.Drawing.Size(1134, 811);
             this.Controls.Add(this.panel_main);
             this.Controls.Add(this.panel_slide);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));

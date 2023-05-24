@@ -56,6 +56,12 @@ namespace Course_Work
 
         private void button_print_Click(object sender, EventArgs e)
         {
+           
+            printData();
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
             string selectQuery;
 
             if (radioButton1.Checked)
@@ -71,7 +77,6 @@ namespace Course_Work
                 selectQuery = "select Отпуск.Id, Сотрудник.Имя, Сотрудник.Фамилия, Должность.Сфера_деятельности as [Сфера деятельности], Должность.Стаж, Отпуск.Дата as [Начало отпуска], Отпуск.Тип, Отпуск.Длительность as [Длительность (в днях)] from Отпуск INNER JOIN Должность_сотрудника as ds ON ds.Id = Отпуск.Должность_сотрудника INNER JOIN Должность ON ds.Должность = Должность.Id INNER JOIN Сотрудник ON ds.Сотрудник = Сотрудник.Id Where Сотрудник.[Пол] = 'Мужчина'";
             }
             showData(new SqlCommand(selectQuery));
-            printData();
         }
     }
 }

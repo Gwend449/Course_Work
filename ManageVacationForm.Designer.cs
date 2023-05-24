@@ -62,8 +62,7 @@
             // 
             // label6
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label6.ForeColor = System.Drawing.Color.White;
@@ -75,7 +74,7 @@
             // 
             // label10
             // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
@@ -87,7 +86,7 @@
             // 
             // label5
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
@@ -99,7 +98,7 @@
             // 
             // textBox_vacID
             // 
-            this.textBox_vacID.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox_vacID.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.textBox_vacID.Location = new System.Drawing.Point(185, 539);
             this.textBox_vacID.Name = "textBox_vacID";
             this.textBox_vacID.ReadOnly = true;
@@ -108,6 +107,7 @@
             // 
             // comboBox2
             // 
+            this.comboBox2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
@@ -124,6 +124,7 @@
             // 
             // dateTimePicker2
             // 
+            this.dateTimePicker2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.dateTimePicker2.Location = new System.Drawing.Point(98, 428);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 27);
@@ -131,7 +132,8 @@
             // 
             // panel3
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
             this.panel3.Location = new System.Drawing.Point(12, 395);
             this.panel3.Name = "panel3";
@@ -140,7 +142,7 @@
             // 
             // button_clear
             // 
-            this.button_clear.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button_clear.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button_clear.BackColor = System.Drawing.Color.MediumBlue;
             this.button_clear.FlatAppearance.BorderSize = 0;
             this.button_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -156,7 +158,7 @@
             // 
             // button_update
             // 
-            this.button_update.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button_update.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button_update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
             this.button_update.FlatAppearance.BorderSize = 0;
             this.button_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -172,7 +174,7 @@
             // 
             // label8
             // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
@@ -188,7 +190,8 @@
             this.DataGridView_employee.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.DataGridView_employee.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.DataGridView_employee.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.DataGridView_employee.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DataGridView_employee.BackgroundColor = System.Drawing.Color.Gainsboro;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -242,7 +245,7 @@
             // 
             // button_delete
             // 
-            this.button_delete.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button_delete.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button_delete.BackColor = System.Drawing.Color.Crimson;
             this.button_delete.FlatAppearance.BorderSize = 0;
             this.button_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -258,7 +261,7 @@
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
@@ -270,7 +273,7 @@
             // 
             // textBox_dur
             // 
-            this.textBox_dur.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox_dur.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.textBox_dur.Location = new System.Drawing.Point(536, 430);
             this.textBox_dur.Name = "textBox_dur";
             this.textBox_dur.Size = new System.Drawing.Size(85, 27);

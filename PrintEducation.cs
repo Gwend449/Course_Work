@@ -32,21 +32,6 @@ namespace Course_Work
 
         private void button_print_Click(object sender, EventArgs e)
         {
-            string selectQuery;
-
-            if (radioButton1.Checked)
-            {
-                selectQuery = "SELECT Образование.Id, Сотрудник.Имя, Сотрудник.Отчество, Сотрудник.Пол, Образование.[Учебное_заведение], Образование.Направление, Образование.[Год_окончания] as [Год окончания] FROM Сотрудник INNER JOIN[Образование] ON[Образование].[Сотрудник] = [Сотрудник].Id";
-            }                                                                                                                                                                                 
-            else if (radioButton_FeMale.Checked)                                                                                                                                              
-            {                                                                                                                                                                                 
-                selectQuery = "SELECT Образование.Id, Сотрудник.Имя, Сотрудник.Отчество, Сотрудник.Пол, Образование.[Учебное_заведение], Образование.Направление, Образование.[Год_окончания] as [Год окончания] FROM Сотрудник INNER JOIN[Образование] ON[Образование].[Сотрудник] = [Сотрудник].Id WHERE Сотрудник.[Пол] = 'Женщина'";
-            }                                                                                                                                                                                 
-            else                                                                                                                                                                              
-            {                                                                                                                                                                                 
-                selectQuery = "SELECT Образование.Id, Сотрудник.Имя, Сотрудник.Отчество, Сотрудник.Пол, Образование.[Учебное_заведение], Образование.Направление, Образование.[Год_окончания] as [Год окончания] FROM Сотрудник INNER JOIN[Образование] ON[Образование].[Сотрудник] = [Сотрудник].Id Where Сотрудник.[Пол] = 'Мужчина'";
-            }
-            showData(new SqlCommand(selectQuery));
             printData();
         }
 
@@ -70,44 +55,24 @@ namespace Course_Work
             DataGridView_employee.DataSource = education.searchEducation(textBox_search.Text);
         }
 
-        private void label7_Click(object sender, EventArgs e)
+
+        private void radioButton1_CheckedChanged_1(object sender, EventArgs e)
         {
+            string selectQuery;
 
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void textBox_search_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void DataGridView_employee_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void radioButton_Male_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton_FeMale_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
+            if (radioButton1.Checked)
+            {
+                selectQuery = "SELECT Образование.Id, Сотрудник.Имя, Сотрудник.Отчество, Сотрудник.Пол, Образование.[Учебное_заведение], Образование.Направление, Образование.[Год_окончания] as [Год окончания] FROM Сотрудник INNER JOIN[Образование] ON[Образование].[Сотрудник] = [Сотрудник].Id";
+            }
+            else if (radioButton_FeMale.Checked)
+            {
+                selectQuery = "SELECT Образование.Id, Сотрудник.Имя, Сотрудник.Отчество, Сотрудник.Пол, Образование.[Учебное_заведение], Образование.Направление, Образование.[Год_окончания] as [Год окончания] FROM Сотрудник INNER JOIN[Образование] ON[Образование].[Сотрудник] = [Сотрудник].Id WHERE Сотрудник.[Пол] = 'Женщина'";
+            }
+            else
+            {
+                selectQuery = "SELECT Образование.Id, Сотрудник.Имя, Сотрудник.Отчество, Сотрудник.Пол, Образование.[Учебное_заведение], Образование.Направление, Образование.[Год_окончания] as [Год окончания] FROM Сотрудник INNER JOIN[Образование] ON[Образование].[Сотрудник] = [Сотрудник].Id Where Сотрудник.[Пол] = 'Мужчина'";
+            }
+            showData(new SqlCommand(selectQuery));
         }
     }
 }

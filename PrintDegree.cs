@@ -64,6 +64,12 @@ namespace Course_Work
 
         private void button_print_Click(object sender, EventArgs e)
         {
+            
+            printData();
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
             string selectQuery;
 
             if (radioButton1.Checked)
@@ -79,7 +85,6 @@ namespace Course_Work
                 selectQuery = "select Сотрудник.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество, Должность.Сфера_деятельности as [Сфера деятельности],Степень.Id as [Id (степень)], Степень.Степень, Должность.Звание FROM Сотрудник INNER JOIN Должность_сотрудника as DS ON DS.Сотрудник = Сотрудник.Id INNER JOIN Должность ON DS.Должность = Должность.Id INNER JOIN Степень_сотрудника as SS ON SS.Сотрудник = Сотрудник.Id INNER JOIN Степень ON Степень.Id = SS.Степень Where Сотрудник.[Пол] = 'Мужчина'";
             }
             showData(new SqlCommand(selectQuery));
-            printData();
         }
     }
 }

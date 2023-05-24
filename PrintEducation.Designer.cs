@@ -49,7 +49,7 @@
             // 
             // radioButton_Male
             // 
-            this.radioButton_Male.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.radioButton_Male.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.radioButton_Male.AutoSize = true;
             this.radioButton_Male.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButton_Male.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
@@ -59,7 +59,7 @@
             this.radioButton_Male.TabIndex = 49;
             this.radioButton_Male.Text = "Мужчина";
             this.radioButton_Male.UseVisualStyleBackColor = true;
-            this.radioButton_Male.CheckedChanged += new System.EventHandler(this.radioButton_Male_CheckedChanged);
+            this.radioButton_Male.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged_1);
             // 
             // label7
             // 
@@ -72,11 +72,10 @@
             this.label7.Size = new System.Drawing.Size(319, 32);
             this.label7.TabIndex = 18;
             this.label7.Text = "Печать (образование)";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // radioButton1
             // 
-            this.radioButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.radioButton1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.radioButton1.AutoSize = true;
             this.radioButton1.Checked = true;
             this.radioButton1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -88,11 +87,11 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Все";
             this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged_1);
             // 
             // button_print
             // 
-            this.button_print.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_print.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button_print.BackColor = System.Drawing.Color.MediumBlue;
             this.button_print.FlatAppearance.BorderSize = 0;
             this.button_print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -109,11 +108,10 @@
             // textBox_search
             // 
             this.textBox_search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_search.Location = new System.Drawing.Point(595, 81);
+            this.textBox_search.Location = new System.Drawing.Point(591, 80);
             this.textBox_search.Name = "textBox_search";
             this.textBox_search.Size = new System.Drawing.Size(195, 27);
             this.textBox_search.TabIndex = 53;
-            this.textBox_search.TextChanged += new System.EventHandler(this.textBox_search_TextChanged);
             // 
             // button_search
             // 
@@ -123,7 +121,7 @@
             this.button_search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_search.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_search.ForeColor = System.Drawing.Color.White;
-            this.button_search.Location = new System.Drawing.Point(803, 77);
+            this.button_search.Location = new System.Drawing.Point(799, 76);
             this.button_search.Name = "button_search";
             this.button_search.Size = new System.Drawing.Size(121, 37);
             this.button_search.TabIndex = 52;
@@ -133,7 +131,8 @@
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
             this.panel2.Location = new System.Drawing.Point(13, 529);
             this.panel2.Name = "panel2";
@@ -142,7 +141,7 @@
             // 
             // radioButton_FeMale
             // 
-            this.radioButton_FeMale.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.radioButton_FeMale.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.radioButton_FeMale.AutoSize = true;
             this.radioButton_FeMale.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButton_FeMale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
@@ -152,11 +151,11 @@
             this.radioButton_FeMale.TabIndex = 50;
             this.radioButton_FeMale.Text = "Женщина";
             this.radioButton_FeMale.UseVisualStyleBackColor = true;
-            this.radioButton_FeMale.CheckedChanged += new System.EventHandler(this.radioButton_FeMale_CheckedChanged);
+            this.radioButton_FeMale.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged_1);
             // 
             // label5
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
@@ -165,7 +164,6 @@
             this.label5.Size = new System.Drawing.Size(47, 19);
             this.label5.TabIndex = 48;
             this.label5.Text = "Пол :";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // DataGridView_employee
             // 
@@ -173,7 +171,8 @@
             this.DataGridView_employee.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.DataGridView_employee.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.DataGridView_employee.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.DataGridView_employee.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DataGridView_employee.BackgroundColor = System.Drawing.Color.Gainsboro;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -223,7 +222,6 @@
             this.DataGridView_employee.ThemeStyle.RowsStyle.Height = 60;
             this.DataGridView_employee.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DataGridView_employee.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.DataGridView_employee.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView_employee_CellContentClick);
             // 
             // panel1
             // 
@@ -234,15 +232,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(934, 67);
             this.panel1.TabIndex = 46;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label9
             // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
-            this.label9.Location = new System.Drawing.Point(445, 84);
+            this.label9.Location = new System.Drawing.Point(441, 83);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(145, 19);
             this.label9.TabIndex = 56;

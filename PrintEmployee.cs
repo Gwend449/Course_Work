@@ -33,21 +33,6 @@ namespace Course_Work
 
         private void button_print_Click(object sender, EventArgs e)
         { 
-            string selectQuery;
-
-            if (radioButton1.Checked)
-            {
-                selectQuery = "SELECT * FROM [Сотрудник]";
-            }
-            else if (radioButton_FeMale.Checked)
-            {
-                selectQuery = "SELECT * FROM[Сотрудник] Where[Пол] = 'Женщина'";
-            }
-            else
-            {
-                selectQuery = "SELECT * FROM[Сотрудник] Where[Пол] = 'Мужчина'";
-            }
-            showData(new SqlCommand(selectQuery));
             printData();
         }
 
@@ -79,6 +64,25 @@ namespace Course_Work
             }
 
             //employee.searchEmployee(textBox_search.Text);
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            string selectQuery;
+
+            if (radioButton1.Checked)
+            {
+                selectQuery = "SELECT * FROM [Сотрудник]";
+            }
+            else if (radioButton_FeMale.Checked == true)
+            {
+                selectQuery = "SELECT * FROM [Сотрудник] Where [Пол] = 'Женщина'";
+            }
+            else
+            {
+                selectQuery = "SELECT * FROM [Сотрудник] Where [Пол] = 'Мужчина'";
+            }
+            showData(new SqlCommand(selectQuery));
         }
     }
 }
