@@ -63,7 +63,7 @@ namespace Course_Work
             textBox_empl_ID.Clear();
             textBox_exp.Clear();
             comboBox1.SelectedIndex = -1;
-            textBox_job.Clear();
+            comboBox_job.SelectedIndex = -1;
             textBox_jobID.Clear();
             textBox_salary.Clear();
             textBox_search.Clear();
@@ -93,7 +93,7 @@ namespace Course_Work
             else
             {
                 int jobact_id = Convert.ToInt32(textBox_jobID.Text);
-                string job = textBox_job.Text;
+                string job = comboBox_job.Text;
                 decimal money = Convert.ToDecimal(textBox_salary.Text);
                 int exp = Convert.ToInt32(textBox_exp.Text);
                 string degree = comboBox1.SelectedText;
@@ -148,7 +148,7 @@ namespace Course_Work
         private void DataGridView_employee_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             textBox_jobID.Text = DataGridView_employee.CurrentRow.Cells[0].Value.ToString();
-            textBox_job.Text = DataGridView_employee.CurrentRow.Cells[1].Value.ToString();
+            comboBox_job.Text = DataGridView_employee.CurrentRow.Cells[1].Value.ToString();
             comboBox1.Text = DataGridView_employee.CurrentRow.Cells[2].Value.ToString();
             textBox_salary.Text = DataGridView_employee.CurrentRow.Cells[3].Value.ToString();
             textBox_exp.Text = DataGridView_employee.CurrentRow.Cells[4].Value.ToString();
@@ -173,7 +173,7 @@ namespace Course_Work
                     int vacID = getIDs(empID, jobID);
                     if (MessageBox.Show("Вы уверены что хотите убрать должность?", "Удалить должность у сотрудника", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        if(vacation.checkVacation(empID))
+                        if (vacation.checkVacation(empID))
                         {
                             if (vacation.deleteVacation(vacID) && jobActivity.deleteEmplJob(jobID, empID))
                             {
@@ -183,7 +183,7 @@ namespace Course_Work
                                 button_clear.PerformClick();
                             }
                         }
-                        if(!vacation.checkVacation(empID))
+                        if (!vacation.checkVacation(empID))
                         {
                             if (jobActivity.deleteEmplJob(jobID, empID))
                             {

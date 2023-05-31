@@ -52,35 +52,35 @@ namespace Course_Work
             string title = comboBox_title.Text;
             string job = comboBox_job.Text;
 
-            if (deg == "" && title == "" && job == "")
+            if (deg == "" && title == "" && job == "" && textBox_search.Text.Length == 0)
             {
                 DataGridView_employee.DataSource = degree.getList(new SqlCommand("select Сотрудник.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество, Должность.Сфера_деятельности as [Сфера деятельности],Степень.Id as [Id (степень)], Степень.Степень, Должность.Звание FROM Сотрудник INNER JOIN Должность_сотрудника as DS ON DS.Сотрудник = Сотрудник.Id INNER JOIN Должность ON DS.Должность = Должность.Id INNER JOIN Степень_сотрудника as SS ON SS.Сотрудник = Сотрудник.Id INNER JOIN Степень ON Степень.Id = SS.Степень"));
             }
-            else if (deg != "" && title == "" && job == "")
+            else if (deg != "" && title == "" && job == "" && textBox_search.Text.Length == 0)
             {
                 (DataGridView_employee.DataSource as DataTable).DefaultView.RowFilter = $"Степень LIKE '{deg}'";
             }
-            else if (deg == "" && title != "" && job == "")
+            else if (deg == "" && title != "" && job == "" && textBox_search.Text.Length == 0)
             {
                 (DataGridView_employee.DataSource as DataTable).DefaultView.RowFilter = $"Звание LIKE '{title}'";
             }
-            else if (deg == "" && title == "" && job != "")
+            else if (deg == "" && title == "" && job != "" && textBox_search.Text.Length == 0)
             {
                 (DataGridView_employee.DataSource as DataTable).DefaultView.RowFilter = $"[Сфера деятельности] LIKE '{job}'";
             }
-            else if (deg != "" && title != "" && job == "")
+            else if (deg != "" && title != "" && job == "" && textBox_search.Text.Length == 0)
             {
                 (DataGridView_employee.DataSource as DataTable).DefaultView.RowFilter = $"Степень LIKE '{deg}' AND Звание LIKE '{title}";
             }
-            else if(deg != "" && title == "" && job == "")
+            else if(deg != "" && title == "" && job == "" && textBox_search.Text.Length == 0)
             {
                 (DataGridView_employee.DataSource as DataTable).DefaultView.RowFilter = $"Степень LIKE '{deg}' AND [Сфера деятельности] LIKE '{job}'";
             }
-            else if(deg == "" && title != "" && job != "")
+            else if(deg == "" && title != "" && job != "" && textBox_search.Text.Length == 0)
             {
                 (DataGridView_employee.DataSource as DataTable).DefaultView.RowFilter = $"Звание LIKE '{title}' AND [Сфера деятельности] LIKE '{job}'";
             }
-            else if(deg != "" && title != "" && job != "")
+            else if(deg != "" && title != "" && job != "" && textBox_search.Text.Length == 0)
             {
                 (DataGridView_employee.DataSource as DataTable).DefaultView.RowFilter = $"Степень LIKE '{deg}' AND Звание LIKE '{title}' AND [Сфера деятельности] LIKE '{job}'";
             }
@@ -112,7 +112,7 @@ namespace Course_Work
         {
             if (textBox_search.Text.Length == 0)
             {
-                DataGridView_employee.DataSource = jobActivity.getList(new SqlCommand("SELECT Должность.Id as [№ Должн.], Должность.[Сфера_деятельности] as [Должность], Должность.Звание, Должность.Оклад, Должность.Стаж, Сотрудник.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество FROM Должность INNER JOIN [Должность_сотрудника] as DS ON DS.Должность = Должность.Id INNER JOIN Сотрудник ON DS.Сотрудник = Сотрудник.Id"));
+                DataGridView_employee.DataSource = jobActivity.getList(new SqlCommand("select Сотрудник.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество, Должность.Сфера_деятельности as [Должность], Степень.Id as [Id(степень)], Степень.Степень, Должность.Звание FROM Сотрудник INNER JOIN Должность_сотрудника as DS ON DS.Сотрудник = Сотрудник.Id INNER JOIN Должность ON DS.Должность = Должность.Id INNER JOIN Степень_сотрудника as SS ON SS.Сотрудник = Сотрудник.Id INNER JOIN Степень ON Степень.Id = SS.Степень"));
             }
             else
             {

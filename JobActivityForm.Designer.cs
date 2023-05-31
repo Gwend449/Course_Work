@@ -50,6 +50,7 @@
             this.datePicker = new System.Windows.Forms.DateTimePicker();
             this.comboBox_job = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView_employee)).BeginInit();
             this.SuspendLayout();
@@ -341,11 +342,25 @@
             this.comboBox1.Size = new System.Drawing.Size(204, 29);
             this.comboBox1.TabIndex = 58;
             // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
+            this.label3.Location = new System.Drawing.Point(526, 450);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(195, 32);
+            this.label3.TabIndex = 59;
+            this.label3.Text = "Выберите  или напишите \r\nДолжность самостоятельно\r\n";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // JobActivityForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 611);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.comboBox_job);
             this.Controls.Add(this.datePicker);
@@ -396,5 +411,6 @@
         private System.Windows.Forms.DateTimePicker datePicker;
         private System.Windows.Forms.ComboBox comboBox_job;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label3;
     }
 }

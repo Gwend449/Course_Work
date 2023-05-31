@@ -176,7 +176,7 @@ namespace Course_Work
 
         public bool checkTitle(ComboBox cb)
         {
-            if (cb.SelectedIndex == -1)
+            if (cb.SelectedIndex == -1 || cb.Text == "")
             {
                 string title = "Отсутствует";
                 SqlCommand command = new SqlCommand($"UPDATE Должность SET Звание = @deg WHERE Id = {job_id}", dataBase.getConnection);

@@ -30,6 +30,59 @@ namespace Course_Work
             }
         }
 
+        public bool checkVacationn(int empID, DateTime startDate)
+        {
+            DataTable table = getList(new SqlCommand($"select * from Отпуск INNER JOIN Должность_сотрудника as ds ON ds.Id = Отпуск.Должность_сотрудника INNER JOIN Сотрудник ON ds.Сотрудник = Сотрудник.Id WHERE Сотрудник.Id = {empID}"));
+            if (table.Rows.Count > 1)
+            {
+                SqlCommand command = new SqlCommand($"SELECT Отпуск.Дата FROM Отпуск INNER JOIN Должность_сотрудника as ds ON ds.Id = Отпуск.Должность_сотрудника WHERE ds.Id = {empID}", dataBase.getConnection);
+                SqlCommand command1 = new SqlCommand($"SELECT Отпуск.Длительность FROM Отпуск INNER JOIN Должность_сотрудника as ds ON ds.Id = Отпуск.Должность_сотрудника WHERE ds.Id = {empID}", dataBase.getConnection);
+                dataBase.openConnection();
+                var date = Convert.ToDateTime(command.ExecuteScalar().ToString());
+                var dur = Convert.ToInt32(command1.ExecuteScalar().ToString());
+                dataBase.closeConnection();
+
+                var vacationEndDate = date.AddDays(dur);
+                var newVacationDate = startDate;
+
+                if (vacationEndDate > newVacationDate)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
+        public bool checkVacationDuration(int empID, DateTime startDate)
+        {
+            SqlCommand command = new SqlCommand($"SELECT Отпуск.Дата FROM Отпуск INNER JOIN Должность_сотрудника as ds ON ds.Id = Отпуск.Должность_сотрудника WHERE ds.Id = {empID}", dataBase.getConnection);
+            SqlCommand command1 = new SqlCommand($"SELECT Отпуск.Длительность FROM Отпуск INNER JOIN Должность_сотрудника as ds ON ds.Id = Отпуск.Должность_сотрудника WHERE ds.Id = {empID}", dataBase.getConnection);
+            dataBase.openConnection();
+            var date = Convert.ToDateTime(command.ExecuteScalar().ToString());
+            var dur = Convert.ToInt32(command1.ExecuteScalar().ToString());
+            dataBase.closeConnection();
+
+            var vacationEndDate = date.AddDays(dur);
+            var newVacationDate = startDate;
+
+            if (vacationEndDate > newVacationDate)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public bool insertVacation(int emp_id, int duration, DateTime date, string type)
         {
             SqlCommand command = new SqlCommand("INSERT INTO [Отпуск] (Длительность, Дата, Тип, Должность_сотрудника) VALUES(@dur, @date, @type, @empid)", dataBase.getConnection);

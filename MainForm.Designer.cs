@@ -69,16 +69,16 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel_main = new System.Windows.Forms.Panel();
             this.panel_cover = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.label_female = new System.Windows.Forms.Label();
             this.label_male = new System.Windows.Forms.Label();
             this.label_total = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel_slide.SuspendLayout();
             this.panel_viewSubMenu.SuspendLayout();
             this.panel_VacSubMenu.SuspendLayout();
@@ -272,7 +272,7 @@
             this.button_Post_editVac.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.button_Post_editVac.Size = new System.Drawing.Size(186, 50);
             this.button_Post_editVac.TabIndex = 4;
-            this.button_Post_editVac.Text = "Изменить данные (отпуск)";
+            this.button_Post_editVac.Text = "Изменить данные";
             this.button_Post_editVac.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_Post_editVac.UseVisualStyleBackColor = true;
             this.button_Post_editVac.Click += new System.EventHandler(this.button_Post_editVac_Click);
@@ -706,19 +706,6 @@
             this.panel_cover.Size = new System.Drawing.Size(931, 811);
             this.panel_cover.TabIndex = 0;
             // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(18, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(771, 22);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "NIZHNY NOVGOROD STATE UNIVERSITY OF ARCHITECTURE AND CIVIL ENGINEERING";
-            // 
             // pictureBox3
             // 
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -728,6 +715,17 @@
             this.pictureBox3.Size = new System.Drawing.Size(931, 511);
             this.pictureBox3.TabIndex = 8;
             this.pictureBox3.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
+            this.label3.Location = new System.Drawing.Point(18, 29);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(804, 23);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Отдел Кадров Нижегородского Государственного Архитектурного Университета";
             // 
             // panel3
             // 
@@ -742,6 +740,19 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(931, 97);
             this.panel3.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(18, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(771, 22);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "NIZHNY NOVGOROD STATE UNIVERSITY OF ARCHITECTURE AND CIVIL ENGINEERING";
             // 
             // label_female
             // 
@@ -807,17 +818,6 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Nikita\'s Lyapin Work 2023";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
-            this.label3.Location = new System.Drawing.Point(18, 29);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(804, 23);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Отдел Кадров Нижегородского Государственного Архитектурного Университета";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -829,7 +829,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Main Form";
+            this.Text = "NNGASU Human Resources Department";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel_slide.ResumeLayout(false);
             this.panel_viewSubMenu.ResumeLayout(false);

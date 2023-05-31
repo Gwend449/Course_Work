@@ -50,33 +50,33 @@ namespace Course_Work
             string type = comboBox1.Text;
             string job = comboBox_job.Text;
 
-            if (type == "" && job == "")
+            if (type == "" && job == "" && textBox_dur.Text.Length == 0 && textBox_search.Text.Length == 0)
             {
-                DataGridView_employee.DataSource = vacation.getList(new SqlCommand("select Отпуск.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество, Должность.Сфера_деятельности as [Сфера деятельности], Должность.Стаж, Отпуск.Дата as [Начало отпуска], Отпуск.Тип, Отпуск.Длительность as [Длительность (в днях)] from Отпуск INNER JOIN Должность_сотрудника as ds ON ds.Id = Отпуск.Должность_сотрудника INNER JOIN Должность ON ds.Должность = Должность.Id INNER JOIN Сотрудник ON ds.Сотрудник = Сотрудник.Id"));
+                DataGridView_employee.DataSource = vacation.getList(new SqlCommand("select Отпуск.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество, Должность.Сфера_деятельности as [Должность], Должность.Стаж, Отпуск.Дата as [Начало отпуска], Отпуск.Тип, Отпуск.Длительность as [Кол-во дней] from Отпуск INNER JOIN Должность_сотрудника as ds ON ds.Id = Отпуск.Должность_сотрудника INNER JOIN Должность ON ds.Должность = Должность.Id INNER JOIN Сотрудник ON ds.Сотрудник = Сотрудник.Id"));
             }
-            else if (type != "" && job == "")
+            else if (type != "" && job == "" && textBox_dur.Text.Length == 0 && textBox_search.Text.Length == 0)
             {
                 (DataGridView_employee.DataSource as DataTable).DefaultView.RowFilter = $"Тип LIKE '{type}'";
             }
-            else if(type == "" && job != "")
+            else if(type == "" && job != "" && textBox_dur.Text.Length == 0 && textBox_search.Text.Length == 0)
             {
-                (DataGridView_employee.DataSource as DataTable).DefaultView.RowFilter = $"[Сфера деятельности] LIKE '{job}'";
+                (DataGridView_employee.DataSource as DataTable).DefaultView.RowFilter = $"Должность LIKE '{job}'";
             }
-            else if(type != "" && job != "")
+            else if(type != "" && job != "" && textBox_dur.Text.Length == 0 && textBox_search.Text.Length == 0)
             {
-                (DataGridView_employee.DataSource as DataTable).DefaultView.RowFilter = $"Тип LIKE '{type}' AND [Сфера деятельности] LIKE '{job}'";
+                (DataGridView_employee.DataSource as DataTable).DefaultView.RowFilter = $"Тип LIKE '{type}' AND Должность LIKE '{job}'";
             }
         }
 
         private void textBox_dur_TextChanged(object sender, EventArgs e)
         {
-            if(textBox_dur.Text.Length == 0)
+            if(textBox_dur.Text.Length == 0 && textBox_search.Text.Length == 0)
             {
-                DataGridView_employee.DataSource = vacation.getList(new SqlCommand("select Отпуск.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество, Должность.Сфера_деятельности as [Сфера деятельности], Должность.Стаж, Отпуск.Дата as [Начало отпуска], Отпуск.Тип, Отпуск.Длительность as [Длительность (в днях)] from Отпуск INNER JOIN Должность_сотрудника as ds ON ds.Id = Отпуск.Должность_сотрудника INNER JOIN Должность ON ds.Должность = Должность.Id INNER JOIN Сотрудник ON ds.Сотрудник = Сотрудник.Id"));
+                DataGridView_employee.DataSource = vacation.getList(new SqlCommand("select Отпуск.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество, Должность.Сфера_деятельности as [Должность], Должность.Стаж, Отпуск.Дата as [Начало отпуска], Отпуск.Тип, Отпуск.Длительность as [Кол-во дней] from Отпуск INNER JOIN Должность_сотрудника as ds ON ds.Id = Отпуск.Должность_сотрудника INNER JOIN Должность ON ds.Должность = Должность.Id INNER JOIN Сотрудник ON ds.Сотрудник = Сотрудник.Id"));
             }
-            else
+            else if (textBox_search.Text.Length == 0)
             {
-                (DataGridView_employee.DataSource as DataTable).DefaultView.RowFilter = $"[Длительность (в днях)] = {Convert.ToInt32(textBox_dur.Text)}";
+                (DataGridView_employee.DataSource as DataTable).DefaultView.RowFilter = $"[Кол-во дней] = {Convert.ToInt32(textBox_dur.Text)}";
             }
         }
 
@@ -105,11 +105,11 @@ namespace Course_Work
         private void textBox_search_TextChanged(object sender, EventArgs e)
         {
             JobActivityClass jobActivity = new JobActivityClass();
-            if (textBox_search.Text.Length == 0)
+            if (textBox_search.Text.Length == 0 && textBox_dur.Text.Length == 0)
             {
-                DataGridView_employee.DataSource = jobActivity.getList(new SqlCommand("SELECT Должность.Id as [№ Должн.], Должность.[Сфера_деятельности] as [Должность], Должность.Звание, Должность.Оклад, Должность.Стаж, Сотрудник.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество FROM Должность INNER JOIN [Должность_сотрудника] as DS ON DS.Должность = Должность.Id INNER JOIN Сотрудник ON DS.Сотрудник = Сотрудник.Id"));
+                DataGridView_employee.DataSource = jobActivity.getList(new SqlCommand("select Отпуск.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество, Должность.Сфера_деятельности as [Должность], Должность.Стаж, Отпуск.Дата as [Начало отпуска], Отпуск.Тип, Отпуск.Длительность as [Кол-во дней] from Отпуск INNER JOIN Должность_сотрудника as ds ON ds.Id = Отпуск.Должность_сотрудника INNER JOIN Должность ON ds.Должность = Должность.Id INNER JOIN Сотрудник ON ds.Сотрудник = Сотрудник.Id"));
             }
-            else
+            else if(textBox_dur.Text.Length == 0)
             {
                 (DataGridView_employee.DataSource as DataTable).DefaultView.RowFilter = $"Имя LIKE '%{textBox_search.Text}%' OR Фамилия LIKE '%{textBox_search.Text}%' OR Отчество LIKE '%{textBox_search.Text}%'";
             }

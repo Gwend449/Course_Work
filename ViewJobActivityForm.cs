@@ -53,19 +53,19 @@ namespace Course_Work
             string title = comboBox_title.Text;
             string job = comboBox_job.Text;
 
-            if(title == "" && job == "")
+            if(title == "" && job == "" && textBox_exp.Text.Length == 0 && textBox_search.Text.Length == 0)
             {
                 DataGridView_employee.DataSource = jobActivity.getList(new SqlCommand("SELECT Должность.Id as [№ Должн.], Должность.[Сфера_деятельности] as [Должность], Должность.Звание, Должность.Оклад, Должность.Стаж, Сотрудник.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество FROM Должность INNER JOIN [Должность_сотрудника] as DS ON DS.Должность = Должность.Id INNER JOIN Сотрудник ON DS.Сотрудник = Сотрудник.Id"));
             }
-            else if(job!="" && title == "")
+            else if(job!="" && title == "" && textBox_exp.Text.Length == 0 && textBox_search.Text.Length == 0)
             {
                 (DataGridView_employee.DataSource as DataTable).DefaultView.RowFilter = $"[Должность] LIKE '{job}'";
             }
-            else if(title!="" && job == "")
+            else if(title!="" && job == "" && textBox_exp.Text.Length == 0 && textBox_search.Text.Length == 0)
             {
                 (DataGridView_employee.DataSource as DataTable).DefaultView.RowFilter = $"[Звание] LIKE '{title}'";
             }
-            else if(title!="" && job!="")
+            else if(title!="" && job!="" && textBox_exp.Text.Length == 0 && textBox_search.Text.Length == 0)
             {
                 (DataGridView_employee.DataSource as DataTable).DefaultView.RowFilter = $"[Должность] LIKE '{job}' AND [Звание] LIKE '{title}'";
             }
@@ -73,11 +73,11 @@ namespace Course_Work
 
         private void textBox_exp_TextChanged(object sender, EventArgs e)
         {
-            if (textBox_exp.Text.Length == 0)
+            if (textBox_exp.Text.Length == 0 && textBox_search.Text.Length == 0)
             {
                 DataGridView_employee.DataSource = jobActivity.getList(new SqlCommand("SELECT Должность.Id as [№ Должн.], Должность.[Сфера_деятельности] as [Должность], Должность.Звание, Должность.Оклад, Должность.Стаж, Сотрудник.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество FROM Должность INNER JOIN [Должность_сотрудника] as DS ON DS.Должность = Должность.Id INNER JOIN Сотрудник ON DS.Сотрудник = Сотрудник.Id"));
             }
-            else
+            else if (textBox_search.Text.Length == 0)
             {
                 (DataGridView_employee.DataSource as DataTable).DefaultView.RowFilter = $"Стаж = {Convert.ToInt32(textBox_exp.Text)}";
             }
@@ -107,11 +107,17 @@ namespace Course_Work
 
         private void textBox_search_TextChanged(object sender, EventArgs e)
         {
-            if (textBox_search.Text.Length == 0)
+            if (textBox_search.Text.Length == 0 && textBox_exp.Text.Length == 0)
             {
                 DataGridView_employee.DataSource = jobActivity.getList(new SqlCommand("SELECT Должность.Id as [№ Должн.], Должность.[Сфера_деятельности] as [Должность], Должность.Звание, Должность.Оклад, Должность.Стаж, Сотрудник.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество FROM Должность INNER JOIN [Должность_сотрудника] as DS ON DS.Должность = Должность.Id INNER JOIN Сотрудник ON DS.Сотрудник = Сотрудник.Id"));
+                DataGridViewColumn column0 = DataGridView_employee.Columns[0];
+                column0.Width = 70;
+                DataGridViewColumn column4 = DataGridView_employee.Columns[4];
+                column4.Width = 70;
+                DataGridViewColumn column5 = DataGridView_employee.Columns[5];
+                column5.Width = 35;
             }
-            else
+            else if (textBox_exp.Text.Length == 0)
             {
                 (DataGridView_employee.DataSource as DataTable).DefaultView.RowFilter = $"Имя LIKE '%{textBox_search.Text}%' OR Фамилия LIKE '%{textBox_search.Text}%' OR Отчество LIKE '%{textBox_search.Text}%'";
             }

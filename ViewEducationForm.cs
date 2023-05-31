@@ -46,17 +46,17 @@ namespace Course_Work
             string course = comboBox_course.Text;
             string college = comboBox_college.Text;
 
-            if (college != "" && course == "")
+            if (college != "" && course == "" && textBox_search.Text.Length == 0)
             {
                 DataGridView_employee.DataSource = education.getList(new SqlCommand($"SELECT [Образование].Id, [Сотрудник].[Имя], [Сотрудник].[Фамилия], [Сотрудник].[Отчество], [Сотрудник].[Возраст], [Сотрудник].[Адрес], [Образование].[Учебное_заведение] as [Учебное Заведение], [Образование].[Направление], [Образование].[Год_окончания] as [Год окончания] FROM [Сотрудник] INNER JOIN [Образование] ON [Образование].[Сотрудник] = [Сотрудник].Id WHERE [Образование].[Учебное_заведение] = '{college}'"));
 
             }
-            else if (college == "" && course == "")
+            else if (college == "" && course == "" && textBox_search.Text.Length == 0)
             {
                 DataGridView_employee.DataSource = education.getList(new SqlCommand($"SELECT [Образование].Id, [Сотрудник].[Имя], [Сотрудник].[Фамилия], [Сотрудник].[Отчество], [Сотрудник].[Возраст], [Сотрудник].[Адрес], [Образование].[Учебное_заведение] as [Учебное Заведение], [Образование].[Направление], [Образование].[Год_окончания] as [Год окончания] FROM [Сотрудник] INNER JOIN [Образование] ON [Образование].[Сотрудник] = [Сотрудник].Id"));
 
             }
-            else if (college != "" && course != "")
+            else if (college != "" && course != "" && textBox_search.Text.Length == 0)
             {
                 DataGridView_employee.DataSource = education.getList(new SqlCommand($"SELECT [Образование].Id, [Сотрудник].[Имя], [Сотрудник].[Фамилия], [Сотрудник].[Отчество], [Сотрудник].[Возраст], [Сотрудник].[Адрес], [Образование].[Учебное_заведение] as [Учебное Заведение], [Образование].[Направление], [Образование].[Год_окончания] as [Год окончания] FROM [Сотрудник] INNER JOIN [Образование] ON [Образование].[Сотрудник] = [Сотрудник].Id WHERE [Образование].[Учебное_заведение] = '{college}' AND [Образование].[Направление] = '{course}'"));
             }
@@ -89,7 +89,7 @@ namespace Course_Work
             JobActivityClass jobActivity = new JobActivityClass();
             if (textBox_search.Text.Length == 0)
             {
-                DataGridView_employee.DataSource = jobActivity.getList(new SqlCommand("SELECT Должность.Id as [№ Должн.], Должность.[Сфера_деятельности] as [Должность], Должность.Звание, Должность.Оклад, Должность.Стаж, Сотрудник.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество FROM Должность INNER JOIN [Должность_сотрудника] as DS ON DS.Должность = Должность.Id INNER JOIN Сотрудник ON DS.Сотрудник = Сотрудник.Id"));
+                DataGridView_employee.DataSource = jobActivity.getList(new SqlCommand("SELECT [Образование].Id, [Сотрудник].[Имя], [Сотрудник].[Фамилия], [Сотрудник].[Отчество], [Сотрудник].[Возраст], [Сотрудник].[Адрес], [Образование].[Учебное_заведение] as [Учебное Заведение], [Образование].[Направление], [Образование].[Год_окончания] as [Год окончания] FROM [Сотрудник] INNER JOIN [Образование] ON [Образование].[Сотрудник] = [Сотрудник].Id"));
             }
             else
             {

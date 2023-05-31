@@ -37,7 +37,6 @@
             this.textBox_salary = new System.Windows.Forms.TextBox();
             this.button_clear = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox_job = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.DataGridView_employee = new Guna.UI2.WinForms.Guna2DataGridView();
             this.label1 = new System.Windows.Forms.Label();
@@ -54,8 +53,9 @@
             this.button_search = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox_jobID = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.comboBox_job = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView_employee)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -127,14 +127,6 @@
             this.label4.Size = new System.Drawing.Size(192, 19);
             this.label4.TabIndex = 64;
             this.label4.Text = "Сфера деятельности :";
-            // 
-            // textBox_job
-            // 
-            this.textBox_job.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.textBox_job.Location = new System.Drawing.Point(218, 482);
-            this.textBox_job.Name = "textBox_job";
-            this.textBox_job.Size = new System.Drawing.Size(456, 27);
-            this.textBox_job.TabIndex = 63;
             // 
             // label2
             // 
@@ -382,27 +374,6 @@
             this.textBox_jobID.Size = new System.Drawing.Size(165, 27);
             this.textBox_jobID.TabIndex = 79;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Лаборант",
-            "Старший Лаборант",
-            "Ассистент",
-            "Преподаватель",
-            "Старший Преподаватель",
-            "Доцент",
-            "Профессор",
-            "Зав. Кафедрой",
-            "Декан",
-            "Проректор",
-            "Ректор"});
-            this.comboBox1.Location = new System.Drawing.Point(99, 526);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(236, 29);
-            this.comboBox1.TabIndex = 81;
-            // 
             // label9
             // 
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -415,13 +386,47 @@
             this.label9.TabIndex = 82;
             this.label9.Text = "(Поиск по Ф.И.О)";
             // 
+            // comboBox_job
+            // 
+            this.comboBox_job.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.comboBox_job.FormattingEnabled = true;
+            this.comboBox_job.Items.AddRange(new object[] {
+            "Лаборант",
+            "Старший Лаборант",
+            "Ассистент",
+            "Преподаватель",
+            "Старший Преподаватель",
+            "Доцент",
+            "Профессор",
+            "Зав. Кафедрой",
+            "Декан",
+            "Проректор",
+            "Ректор"});
+            this.comboBox_job.Location = new System.Drawing.Point(218, 481);
+            this.comboBox_job.Name = "comboBox_job";
+            this.comboBox_job.Size = new System.Drawing.Size(379, 29);
+            this.comboBox_job.TabIndex = 83;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Доцент",
+            "Профессор"});
+            this.comboBox1.Location = new System.Drawing.Point(99, 526);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(204, 29);
+            this.comboBox1.TabIndex = 84;
+            // 
             // ManageJobActivityForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 611);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBox_job);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox_jobID);
             this.Controls.Add(this.textBox_search);
@@ -433,7 +438,6 @@
             this.Controls.Add(this.textBox_salary);
             this.Controls.Add(this.button_clear);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox_job);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.DataGridView_employee);
             this.Controls.Add(this.label1);
@@ -463,7 +467,6 @@
         private System.Windows.Forms.TextBox textBox_salary;
         private System.Windows.Forms.Button button_clear;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox_job;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2DataGridView DataGridView_employee;
         private System.Windows.Forms.Label label1;
@@ -480,7 +483,8 @@
         private System.Windows.Forms.Button button_search;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox_jobID;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox comboBox_job;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

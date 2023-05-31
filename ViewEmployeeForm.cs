@@ -52,23 +52,23 @@ namespace Course_Work
         {
             string city = comboBox_adr.Text;
             string sex = comboBox_sex.Text;
-            if(city != "" && sex == "")
+            if(city != "" && sex == "" && textBox_search.Text.Length == 0)
             {
                 DataGridView_employee.DataSource = employee.getEmployeeList(new SqlCommand($"SELECT * FROM Сотрудник WHERE Адрес = '{city}'"));
             }
-            else if(city == "" && (sex == "Все" || sex == ""))
+            else if(city == "" && (sex == "Все" || sex == "") && textBox_search.Text.Length == 0)
             {
                 DataGridView_employee.DataSource = employee.getEmployeeList(new SqlCommand($"SELECT * FROM Сотрудник"));
             }
-            else if(city != "" && (sex == "Все" || sex == ""))
+            else if(city != "" && (sex == "Все" || sex == "") && textBox_search.Text.Length == 0)
             {
                 DataGridView_employee.DataSource = employee.getEmployeeList(new SqlCommand($"SELECT * FROM Сотрудник WHERE Адрес = '{city}'"));
             }
-            else if (city != "" && sex != "")
+            else if (city != "" && sex != "" && textBox_search.Text.Length == 0)
             {
                 DataGridView_employee.DataSource = employee.getEmployeeList(new SqlCommand($"SELECT * FROM Сотрудник WHERE Адрес = '{city}' AND Пол = '{sex}'"));
             }
-            else if (city == "" && sex != "")
+            else if (city == "" && sex != "" && textBox_search.Text.Length == 0)
             {
                 DataGridView_employee.DataSource = employee.getEmployeeList(new SqlCommand($"SELECT * FROM Сотрудник WHERE Пол = '{sex}'"));
             }    
@@ -101,7 +101,7 @@ namespace Course_Work
             JobActivityClass jobActivity = new JobActivityClass();
             if (textBox_search.Text.Length == 0)
             {
-                DataGridView_employee.DataSource = jobActivity.getList(new SqlCommand("SELECT Должность.Id as [№ Должн.], Должность.[Сфера_деятельности] as [Должность], Должность.Звание, Должность.Оклад, Должность.Стаж, Сотрудник.Id, Сотрудник.Имя, Сотрудник.Фамилия, Сотрудник.Отчество FROM Должность INNER JOIN [Должность_сотрудника] as DS ON DS.Должность = Должность.Id INNER JOIN Сотрудник ON DS.Сотрудник = Сотрудник.Id"));
+                DataGridView_employee.DataSource = jobActivity.getList(new SqlCommand("SELECT * FROM [Сотрудник]"));
             }
             else
             {

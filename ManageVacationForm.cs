@@ -64,6 +64,7 @@ namespace Course_Work
                 {
                     if(vacation.updateVacation(vacID, dur, date, type))
                     {
+
                         showTable();
                         MessageBox.Show("Информация об отпуске успешно изменена!", "Изменить отпуск", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         button_clear.PerformClick();

@@ -14,6 +14,7 @@ namespace Course_Work
     public partial class VacationForm : Form
     {
         VacationClass vacation = new VacationClass();
+        DataBase dataBase = new DataBase();
 
         public VacationForm()
         {
@@ -27,6 +28,7 @@ namespace Course_Work
             column0.Width = 70;
             DataGridViewColumn column4 = DataGridView_employee.Columns[4];
             column4.Width = 160;
+            DataGridView_employee.ReadOnly = true;
         }
 
         private void showTable()
@@ -53,26 +55,56 @@ namespace Course_Work
 
         private void button_add_Click_1(object sender, EventArgs e)
         {
-            int empId = Convert.ToInt32(textBox_empl_ID.Text);
-            int duration = Convert.ToInt32(textBox_dur.Text);
-            DateTime date = dateTimePicker1.Value;
-            string type = comboBox1.Text;
+
+            //using (SqlCommand command_select = new SqlCommand("SELECT Должность_со FROM Должность", dataBase.getConnection))
+            //{
+            //    using (SqlDataReader reader = command_select.ExecuteReader())
+            //    {
+            //        while (reader.Read())
+            //        {
+            //            job_id = Convert.ToInt32(reader[0].ToString());
+            //        }
+            //    }
+            //}
 
             if (textBox_dur.Text == "" || textBox_empl_ID.Text == "" ||
                 comboBox1.SelectedIndex == -1)
             {
                 MessageBox.Show("Пожалуйста заполните пустые поля", "Пустое поле", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else
+            else 
             {
                 try
                 {
-                    if (vacation.insertVacation(empId, duration, date, type))
+                    int empId = Convert.ToInt32(textBox_empl_ID.Text);
+                    int duration = Convert.ToInt32(textBox_dur.Text);
+                    DateTime date = dateTimePicker1.Value;
+                    string type = comboBox1.Text;
+
+
+                    if (vacation.checkVacationn(empId, date))
                     {
-                        showTable();
-                        MessageBox.Show("Информация об отпуске успешно добавлена", "Добавить данные", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        button_clear.PerformClick();
+                        if (vacation.insertVacation(empId, duration, date, type))
+                        {
+                            showTable();
+                            MessageBox.Show("Информация об отпуске успешно добавлена", "Добавить данные", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            button_clear.PerformClick();
+                        }   
                     }
+                    else if (!vacation.checkVacationn(empId, date) || !vacation.checkVacation(empId))
+                    {
+                        if (vacation.insertVacation(empId, duration, date, type))
+                        {
+                            showTable();
+                            MessageBox.Show("Информация об отпуске успешно добавлена", "Добавить данные", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            button_clear.PerformClick();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Некорректная дата, отпуска в одинаковое время.", "Добавить данные", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
                 }
                 catch (Exception ex)
                 {
@@ -102,3 +134,5 @@ namespace Course_Work
         }
     }
 }
+    
+
