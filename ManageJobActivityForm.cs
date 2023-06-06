@@ -229,6 +229,11 @@ namespace Course_Work
             checkExper();
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         //int click = 1;
 
         //private void radioButtonYes_Click(object sender, EventArgs e)
@@ -256,6 +261,6 @@ namespace Course_Work
         //    }
         //}
 
-       
+
     }
 }
